@@ -30,8 +30,10 @@ Harvard Westlake Adventure is designed with scalability in mind. The game can ea
 Adhering to the California non-discrimination clause, Harvard Westlake Adventure is designed to be accessible and inclusive for all users. The game includes:
 
 **Adaptive Features:**
-Options for colorblind mode, scalable text, and simplified controls.
+Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game
 
 **Diverse Representation:** Characters and narratives that reflect the diversity of the Harvard Westlake community.
 
 **Physical Accessibility:** Alternative gameplay options for users unable to physically explore the entire campus.
+
+To expand, this idea can be implemented at other schools. They could use their own teachers, students, etc.
