@@ -37,3 +37,8 @@ Options for colorblind mode, scalable text, and simplified controls. Different t
 **Physical Accessibility:** Alternative gameplay options for users unable to physically explore the entire campus.
 
 To expand, this idea can be implemented at other schools. They could use their own teachers, students, etc.
+
+
+
+
+New Ideas:
