@@ -42,3 +42,8 @@ To expand, this idea can be implemented at other schools. They could use their o
 
 
 New Ideas:
+Each department represents a different element, where one department counters another. For example, Science counters English but is weak to Math.
+
+I think notable students in the school should also be able to be captured
+
+There should be a 3d to-scale model of every capturable person, so that you can spawn them anywhere
