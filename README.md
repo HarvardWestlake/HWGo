@@ -47,3 +47,7 @@ Each department represents a different element, where one department counters an
 I think notable students in the school should also be able to be captured
 
 There should be a 3d to-scale model of every capturable person, so that you can spawn them anywhere
+
+Cafeteria food of the day can serve as different boost/powerup
+
+the evolution of captured teachrs.
