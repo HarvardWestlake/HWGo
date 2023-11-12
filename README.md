@@ -50,4 +50,12 @@ There should be a 3d to-scale model of every capturable person, so that you can 
 
 Cafeteria food of the day can serve as different boost/powerup
 
-the evolution of captured teachrs.
+the evolution of captured teachers.
+
+story lines for willing teachers/department heads
+
+To capture a teacher, you need to answer questions on the subject of what the teacher teaches,
+For example, if you try to capture Mr. Stout, you are questioned the big O of searching for something
+in a singlylinkedlist
+
+
