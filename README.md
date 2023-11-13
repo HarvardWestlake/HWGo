@@ -15,6 +15,9 @@ Competition is a key aspect of Harvard Westlake Adventure. Players can form team
 Also, add Seasonal Events and Challenges: Implement seasonal events with special themes (e.g., Homecoming, sports seasons) where players can compete in time-limited challenges for exclusive rewards.
 Furthermore, create a system of milestones where players are rewarded for achieving certain targets, like collecting all characters from a particular department or completing all historical quests.
 
+**Personalized User Profiles**
+Allow players to create personalized profiles where they can display their achievements, collections, and game statistics. This could include custom avatars and the ability to unlock special accessories or outfits for their avatars as they progress in the game.
+
 **Engagement and Addictiveness Strategies**
 The game employs various strategies to ensure player engagement and retention:
 
