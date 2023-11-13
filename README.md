@@ -12,6 +12,8 @@ Users will interact with the game via their smartphones, exploring the Harvard W
 
 **Competitive Element**
 Competition is a key aspect of Harvard Westlake Adventure. Players can form teams based on their school houses or graduation years, competing in weekly challenges to collect rare characters or complete historical quests. Leaderboards display top collectors and teams, fostering a friendly rivalry that promotes continuous engagement with the game.
+Also, add Seasonal Events and Challenges: Implement seasonal events with special themes (e.g., Homecoming, sports seasons) where players can compete in time-limited challenges for exclusive rewards.
+Furthermore, create a system of milestones where players are rewarded for achieving certain targets, like collecting all characters from a particular department or completing all historical quests.
 
 **Engagement and Addictiveness Strategies**
 The game employs various strategies to ensure player engagement and retention:
