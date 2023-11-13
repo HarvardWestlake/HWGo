@@ -20,11 +20,14 @@ The game employs various strategies to ensure player engagement and retention:
 
 **Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting.
 
-**Achievement System:** Players earn badges and rewards for completing collections and special challenges. 
+**Achievement System:** Players earn badges and rewards for completing collections and special challenges. There can also be a couple of collaborative challenges, which forces students to interact with other students in order to complete certain challenges, which can be used to foster a sense of community amongst players.
 
 **Social Features:** Integration with social media allows players to share achievements and compete with friends.
 
 **Event-Driven Gameplay:** Special events, tied to school calendar highlights, offer unique gameplay experiences.
+
+**Guest Appearances:**
+You can occasionally introduce "guest appearances" in the form of HW alumni to participate in the game. There could be special challenges and rewards tied to their apperance, as well as exclusive in-game events based around that alumni.
 
 **Scalability and Expansion**
 Harvard Westlake Adventure is designed with scalability in mind. The game can easily be expanded to include new areas of the campus, additional characters, and even virtual representations of significant school events. The flexible architecture allows for easy adaptation to other schools or educational institutions, offering a template for gamified campus exploration. Also, the app's integration with social media will allow for the app to be much easier for players outside of Harvard Westlake to enjoy.
