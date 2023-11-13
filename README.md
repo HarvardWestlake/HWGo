@@ -20,20 +20,20 @@ The game employs various strategies to ensure player engagement and retention:
 
 **Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting.
 
-**Achievement System:** Players earn badges and rewards for completing collections and special challenges.
+**Achievement System:** Players earn badges and rewards for completing collections and special challenges. 
 
 **Social Features:** Integration with social media allows players to share achievements and compete with friends.
 
 **Event-Driven Gameplay:** Special events, tied to school calendar highlights, offer unique gameplay experiences.
 
 **Scalability and Expansion**
-Harvard Westlake Adventure is designed with scalability in mind. The game can easily be expanded to include new areas of the campus, additional characters, and even virtual representations of significant school events. The flexible architecture allows for easy adaptation to other schools or educational institutions, offering a template for gamified campus exploration.
+Harvard Westlake Adventure is designed with scalability in mind. The game can easily be expanded to include new areas of the campus, additional characters, and even virtual representations of significant school events. The flexible architecture allows for easy adaptation to other schools or educational institutions, offering a template for gamified campus exploration. Also, the app's integration with social media will allow for the app to be much easier for players outside of Harvard Westlake to enjoy.
 
 **Accessibility and Inclusivity**
 Adhering to the California non-discrimination clause, Harvard Westlake Adventure is designed to be accessible and inclusive for all users. The game includes:
 
 **Adaptive Features:**
-Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game
+Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game. Teachers could also maybe have recorded voicelines when you interact with them in the app, making the game feel more immersive.
 
 **Diverse Representation:** Characters and narratives that reflect the diversity of the Harvard Westlake community.
 
