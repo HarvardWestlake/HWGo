@@ -5,6 +5,7 @@ Welcome to Harvard Westlake Adventure, a mobile augmented reality game that tran
 
 **Value/Use**
 Harvard Westlake Adventure serves as both an entertaining game and an educational tool. Players learn about the school's history, faculty, and landmarks while engaging in a fun, interactive scavenger hunt. By collecting virtual representations of teachers and notable alumni, users deepen their connection with the school's legacy. This game also promotes physical activity and exploration of the campus, enhancing school spirit and community engagement.
+- In order to promote the game, teachers who refer it to the most students may be "rarer."
 
 **User Interaction and Experience**
 Users will interact with the game via their smartphones, exploring the Harvard Westlake campus to find and collect virtual characters. The game uses GPS and AR technology to overlay the virtual world onto the real campus, creating an immersive experience. Players can collect different faculty members, each with unique attributes and historical facts, by visiting specific campus locations. Social features, such as leaderboards and team challenges, encourage interaction among players.
@@ -30,7 +31,7 @@ Harvard Westlake Adventure is designed with scalability in mind. The game can ea
 Adhering to the California non-discrimination clause, Harvard Westlake Adventure is designed to be accessible and inclusive for all users. The game includes:
 
 **Adaptive Features:**
-Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game
+Options for colorblind mode, scalable text, and simplified controls. Different teachers can be added to the game
 
 **Diverse Representation:** Characters and narratives that reflect the diversity of the Harvard Westlake community.
 
