@@ -18,11 +18,11 @@ Competition is a key aspect of Harvard Westlake Adventure. Players can form team
 **Engagement and Addictiveness Strategies**
 The game employs various strategies to ensure player engagement and retention:
 
-**Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting.
+**Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting. The map can also be updated regularly, in tune with seasons or certain events that are happening across campus.
 
-**Achievement System:** Players earn badges and rewards for completing collections and special challenges. There can also be a couple of collaborative challenges, which forces students to interact with other students in order to complete certain challenges, which can be used to foster a sense of community amongst players.
+**Achievement System:** Players earn badges and rewards for completing collections and special challenges. There can also be a couple of collaborative challenges, which forces students to interact with other students in order to complete certain challenges, which can be used to foster a sense of community amongst players. 
 
-**Social Features:** Integration with social media allows players to share achievements and compete with friends.
+**Social Features:** Integration with social media allows players to share achievements and compete with friends. There could also be an in-game chat feature, so that players can communicate with other players in real time. You can also introduce the idea of clubs within the game so that students with similar interests can come together to complete challenges and strategize.
 
 **Event-Driven Gameplay:** Special events, tied to school calendar highlights, offer unique gameplay experiences.
 
@@ -36,7 +36,7 @@ Harvard Westlake Adventure is designed with scalability in mind. The game can ea
 Adhering to the California non-discrimination clause, Harvard Westlake Adventure is designed to be accessible and inclusive for all users. The game includes:
 
 **Adaptive Features:**
-Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game. Teachers could also maybe have recorded voicelines when you interact with them in the app, making the game feel more immersive.
+Options for colorblind mode, scalable text, and simplified controls. Different teachers can be added to the game. Teachers could also maybe have recorded voicelines when you interact with them in the app, making the game feel more immersive.
 
 **Diverse Representation:** Characters and narratives that reflect the diversity of the Harvard Westlake community.
 
