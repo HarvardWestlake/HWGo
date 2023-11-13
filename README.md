@@ -37,3 +37,25 @@ Options for colorblind mode, scalable text, and simplified controls. Different t
 **Physical Accessibility:** Alternative gameplay options for users unable to physically explore the entire campus.
 
 To expand, this idea can be implemented at other schools. They could use their own teachers, students, etc.
+
+
+
+
+New Ideas:
+Each department represents a different element, where one department counters another. For example, Science counters English but is weak to Math.
+
+I think notable students in the school should also be able to be captured
+
+There should be a 3d to-scale model of every capturable person, so that you can spawn them anywhere
+
+Cafeteria food of the day can serve as different boost/powerup
+
+the evolution of captured teachers.
+
+story lines for willing teachers/department heads
+
+To capture a teacher, you need to answer questions on the subject of what the teacher teaches,
+For example, if you try to capture Mr. Stout, you are questioned the big O of searching for something
+in a singlylinkedlist
+
+
