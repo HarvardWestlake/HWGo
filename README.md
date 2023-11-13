@@ -37,3 +37,10 @@ Options for colorblind mode, scalable text, and simplified controls. Different t
 **Physical Accessibility:** Alternative gameplay options for users unable to physically explore the entire campus.
 
 To expand, this idea can be implemented at other schools. They could use their own teachers, students, etc.
+
+Implement clans/groups that players in the school can join
+Students should represent their group
+
+Implement AR technology for people willing to use it? Might be possible
+
+Hidden easter eggs around campus
