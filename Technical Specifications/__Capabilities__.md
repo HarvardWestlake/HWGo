@@ -11,4 +11,4 @@ This file should explain who knows what capabilities of the Unity engine.  If yo
 // Capabilities people have with the game engine
 // TODO - organize these as they expand in scope
 **Capabilites Understood:**
-- Tilemap Creation - 
+- Load AR Models-   - Mr. Theiss (30% through tutorials)
