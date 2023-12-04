@@ -1,0 +1,68 @@
+Faculty Inventory
+Owned Faculty
+Displays collected faculty members in a grid.
+Each faculty member has a pixelated/stylized photo.
+Bottom right corner shows the number of collected faculty of that type.
+Background color corresponds to the department.
+Outer rim indicates faculty rarity (Common: Bronze, Uncommon: Silver, Rare: Gold, Ultra Rare: Fiery stylized border).
+All Faculty
+Grid displays both owned and unowned faculty.
+Unowned faculty images replaced with a silhouette.
+Resembles Animal Crossing's "Critterpedia."
+Faculty Specific Information
+Clicking on an icon opens a pop-up window with faculty details.
+Smooth pop-up animation enlarges the faculty's photo.
+Top left: Enlarged faculty picture.
+To the right and beneath: Faculty info, including name, department, rarity, and combat/breedability stats.
+UI Features
+Simple UI with search, scroll, and swipe.
+Top search button for searching by name, department, or rarity.
+Search attributes displayed as rounded rectangles.
+Vertical scrolling to view the entire inventory.
+Swipe left/right to switch between Owned and All Faculty.
+Circles beneath the search bar indicate the current page.
+Ball/Item Inventory
+General Info
+Clothes can be attached to specific faculty.
+Obtain clothes from battles, lost and found, sewing room, and random places.
+Clothes have rarity based on faculty rarity.
+Each faculty has a specific item for additional boosts.
+Wardrobe Items
+Head
+Hair wraps, bunny ears, baseball hat, shower cap, nightcap, wizard hat.
+Bunny ears are white and pink, unchangeable.
+Face
+Glasses, sunglasses, mustache, beard, cat whiskers and nose.
+Mustache color matches hair; if bald, defaults to black.
+Tops
+Dress shirt, t-shirt, hoodie, jacket.
+Top Accessories
+Bowtie, tie, flower.
+Flower options: red roses + orange tulips.
+Bottoms
+Pants, shorts, sweatpants, mid-length skirts.
+Socks
+Knee high, ankle.
+Shoes
+Basic sneakers, loafers, boots.
+Full Body
+Onesies (pajama days), overalls.
+Onesies have teddy bear designs; overalls are blue, shirt color changeable.
+Wardrobe Colors
+Black available for all items.
+Each department has assigned colors; faculty can only wear their department's colors and black.
+Specific Teacher Clothing Items
+Dr. Helston: Socks (Boost: Charisma).
+Mr. Varney: Belt and boots.
+Mr. Yaron: Hand sanitizer.
+Dr. Goedde: Scarf.
+Mr. Axelrod: Ringing phone.
+Mr. Webber: Hat.
+Mr. Godoy: Clay.
+Item Collection Process
+Pick up wardrobe at Pokestops and random places on campus.
+Changing details: Spin to the right, jump, cloud of smoke, and change into clothes.
+Everything is gender-neutral; teachers can have any wardrobe items.
+Balls
+Each department has its own ball type, increasing the chance of catching faculty.
+Math ball (symbols to be added manually).
