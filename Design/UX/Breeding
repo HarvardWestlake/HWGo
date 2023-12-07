@@ -1,6 +1,7 @@
 **Teacher Breeding**
 **How to Breed**
 **Unlocking Teachers**:
+Added Calculate XP method, wrote how Xp should be averaged with math.random for child stats
 
 **Catch and unlock both teachers you wish to breed.**
 Teachers must reach a certain maturity level (1 in-game hour after being caught) to breed.
