@@ -7,6 +7,9 @@ This file should explain who knows what capabilities of the Unity engine.  If yo
 2. Data Storage
  a. Client-side data
  b. Server-side data
+3. Map
+ a. Mapbox Unity SDK - Tried installing, won't compile
+  - Seems to be an abandoned project
 
 // Capabilities people have with the game engine
 // TODO - organize these as they expand in scope
