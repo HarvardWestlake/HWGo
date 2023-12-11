@@ -36,4 +36,14 @@ The user can switch between Owned and All Faculty by swiping left and right
 Two small circles beneath the search bar will indicate which page the user is currently on
 When switching to another page, one circle will become gray and the other will become colored. 
 
+## Faculty Stats
+- Faculty members have a certain rarity (e.g legendery, uncommon, etc.)
+- each rarity is associated with an int. Common in assigned 1, uncommon is assigned 2, etc. 
+- Faculty damage and health equals some random number between 1 and 100 multiplied by the rarity int
+- This incentivizes the continual collection of faculty, even if you already have certain faculty members
+
+## Faculty Combinations
+- In the inventory, faculties of the same person and rarity can be combined to get higher stats
+- Combinining two faculty effectively rerolls the random chance health and damage
+- In the reroll, the random number is between 50 and 100, and is then multiplied by the rarity. 
 
