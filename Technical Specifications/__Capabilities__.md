@@ -20,3 +20,6 @@ This file should explain who knows what capabilities of the Unity engine.  If yo
 **Capabilites Understood:**
 - Load AR Models-   - Mr. Theiss (30% through tutorials)
 - Have AR Environemnt Setup, Able To Use Assets In AR Camera, and Test on Phone  - Manny
+
+Note from Kian:
+- I worked on adding objects to Unity Scene. Now I think I can download xCode and see them on my phone.
