@@ -1,0 +1,4 @@
+User Class
+Each user has a unique ID, Number of battles theyve won (rank), array of the faculty they won, and array of the inventory they own
+
+(Sarah: I also added this to the figma)
