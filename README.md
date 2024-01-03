@@ -1,4 +1,4 @@
-# InitialCommit
+# HW Go!
 
 **Introduction**
 Welcome to Harvard Westlake Adventure, a mobile augmented reality game that transforms the iconic Harvard Westlake campus into a vibrant, interactive world. Inspired by the mechanics of Pokémon Go, this app is designed to engage students, staff, and alumni in a unique exploration of the school's rich heritage. With a target audience primarily comprising current students and alumni, the game offers a novel way to connect with the school community and its history.
