@@ -1,0 +1,23 @@
+**Leveling**
+(Jingjing)
+
+**Increase in xp per level**
+1->2: 1000xp
+2->3: 1500xp
+3->4: 2000xp
+...
+(n-1)->n: 500n xp
+
+**How many levels?**
+Each pokemon has 100 levels
+
+**How to earn xp**
+Spinning a pokestop (that u find): 150xp
+Catching pokemon:
+    common teacher: 50xp
+    rare: 125xp
+    very rare: 750xp
+Battles: 
+    win: 450xp
+    lose: 0xp
+
