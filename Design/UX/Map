@@ -2,3 +2,16 @@ Figma for map is done, added all functions and behaviors as well as figured out 
 
 
 Found API Key, have really good 3d Map in Unity, will show on Friday
+
+
+Map Update 1/3/2024
+
+Kian Mark and I got on the same page as far as pasting the cesium map into unity, we began to de research to fix the rendering issues that were present, we don't have a concrete idea yet but we're working on it.
+
+- Markus
+Map Update 1/5/2024
+
+
+Switched from Cesium map to Go Map packages from Unity, going to work on rendering only HW and not the entire world map, as well as object creation and working on rotating the map with the GPS.
+
+- Markus
