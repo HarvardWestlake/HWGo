@@ -4,3 +4,7 @@ How to Catch: If you spot a faculty in the wild you can throw a pokeball corespo
 Sarah Brown: Added to Figma
 
 Added method where catcher must answer questions related to Faculty's department in order to successfully catch
+
+Added a method that gauges impact radius. - Wyatt
+
+Added a variable that on click allows you to pick up and grab pokeball in a catching encounter. A method will be used to track finger movement and pull+throw the ball for a more interactive catching system. - Wyatt
