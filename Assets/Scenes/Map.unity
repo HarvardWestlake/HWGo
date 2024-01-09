@@ -883,7 +883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: mapType
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: zoomLevel
@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: mapbox_accessToken
-      value: 
+      value: pk.eyJ1IjoiYm9udW51MjAyIiwiYSI6ImNscjNzeW1oZTFnbm4yaXBlOTEyM2QwZXYifQ.ZPwP58WlfcWN0fqxHEQ0tA
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: addGoFeatureComponents
@@ -1017,13 +1017,13 @@ MonoBehaviour:
   worldScale: 1
   desiredAccuracy: 70
   currentLocation:
-    latitude: 41.910509366663945
-    longitude: 12.476284503936768
+    latitude: 34.13952865194667
+    longitude: -118.4125167264439
     altitude: 0
     timestampLastUpdate: 1569804125.147685
   worldOrigin:
-    latitude: 29.7619934082031
-    longitude: -95.3695678710938
+    latitude: 34.13952865194667
+    longitude: -118.4125167264439
     altitude: 0
     timestampLastUpdate: 1569804125.1495
   onOriginSet:
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   lastLocations: []
   currentMotionState: 0
   useLocationServices: 1
-  demoLocation: 1
+  demoLocation: 14
   updateDistance: 0.1
   simulateMotion: 1
   useWsadInEditor: 1
