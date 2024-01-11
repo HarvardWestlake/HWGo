@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pokeball : MonoBehaviour
+public class PokeballThrow : MonoBehaviour
 {
     [SerializeField]
     private float _throwSpeed = 35f;
