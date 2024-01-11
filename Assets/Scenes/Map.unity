@@ -1043,7 +1043,7 @@ MonoBehaviour:
   simulateMotion: 1
   useWsadInEditor: 1
   motionMode: 1
-  avatar: {fileID: 0}
+  avatar: {fileID: 1379913656}
   useBannerInsideEditor: 0
   banner: {fileID: 97163142}
   bannerText: {fileID: 1460940602}
