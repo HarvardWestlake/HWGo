@@ -123,6 +123,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!21 &114845157
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Legacy Shaders/Diffuse
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &177277033
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +517,149 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!21 &621919567
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Legacy Shaders/Diffuse
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []
+--- !u!21 &682235455
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Legacy Shaders/Diffuse
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
+  m_BuildTextureStacks: []
+--- !u!1 &759019464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759019466}
+  - component: {fileID: 759019465}
+  m_Layer: 0
+  m_Name: Location Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &759019465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759019464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0045cf7d9f1d9448fae1e60472a383e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomLevel: 16
+  worldScale: 1
+  desiredAccuracy: 70
+  currentLocation:
+    latitude: 0
+    longitude: 0
+    altitude: 0
+    timestampLastUpdate: 0
+  worldOrigin:
+    latitude: 0
+    longitude: 0
+    altitude: 0
+    timestampLastUpdate: 0
+  onOriginSet:
+    m_PersistentCalls:
+      m_Calls: []
+  onLocationChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMotionStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  lastLocations: []
+  currentMotionState: 0
+  useLocationServices: 0
+  demoLocation: 0
+  updateDistance: 0.1
+  simulateMotion: 0
+  useWsadInEditor: 1
+  motionMode: 1
+  avatar: {fileID: 0}
+  useBannerInsideEditor: 0
+  banner: {fileID: 0}
+  bannerText: {fileID: 0}
+--- !u!4 &759019466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759019464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 729, y: 1277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1067071662}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018320239
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +780,238 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018320239}
   m_CullTransparentMesh: 1
+--- !u!1 &1067071661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067071662}
+  - component: {fileID: 1067071663}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1067071662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067071661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 759019466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067071663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067071661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e3a95dab0a4efcab4bd5d59167548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationManager: {fileID: 759019465}
+  tileBuffer: 2
+  zoomLevel: 16
+  useCache: 1
+  clearCache: 0
+  openCache: 0
+  mapType: 0
+  customTile: {fileID: 0}
+  mapbox_accessToken: pk.eyJ1IjoiYm9udW51MjAyIiwiYSI6ImNscjNzeW1oZTFnbm4yaXBlOTEyM2QwZXYifQ.ZPwP58WlfcWN0fqxHEQ0tA
+  osm_api_key: 
+  nextzen_api_key: 
+  protomaps_api_key: 
+  tileBackground: {fileID: 0}
+  tempTileBackgorund: {fileID: 0}
+  layers:
+  - layerType: 1
+    isPolygon: 1
+    outlinedPolygon: 0
+    uvMappingStyle: 0
+    useRealHeight: 0
+    forceMinHeight: 0
+    slicedExtrusion: 1
+    defaultRendering:
+      kind: 0
+      material: {fileID: 114845157}
+      outlineMaterial: {fileID: 0}
+      hasRoof: 0
+      roofMaterial: {fileID: 0}
+      materials: []
+      lineWidth: 0
+      outlineWidth: 0
+      polygonHeight: 2
+      tag: 
+    renderingOptions: []
+    useOnly: 
+    avoid: 
+    useTunnels: 1
+    useBridges: 1
+    useColliders: 0
+    colliderHeight: 0
+    unityLayer: 0
+    castShadows: 0
+    startInactive: 0
+    disabled: 0
+    OnFeatureLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  - layerType: 0
+    isPolygon: 1
+    outlinedPolygon: 0
+    uvMappingStyle: 0
+    useRealHeight: 0
+    forceMinHeight: 0
+    slicedExtrusion: 1
+    defaultRendering:
+      kind: 0
+      material: {fileID: 1751738133}
+      outlineMaterial: {fileID: 0}
+      hasRoof: 0
+      roofMaterial: {fileID: 0}
+      materials: []
+      lineWidth: 0
+      outlineWidth: 0
+      polygonHeight: 0
+      tag: 
+    renderingOptions: []
+    useOnly: 
+    avoid: 
+    useTunnels: 1
+    useBridges: 1
+    useColliders: 0
+    colliderHeight: 0
+    unityLayer: 0
+    castShadows: 0
+    startInactive: 0
+    disabled: 0
+    OnFeatureLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  - layerType: 0
+    isPolygon: 1
+    outlinedPolygon: 0
+    uvMappingStyle: 0
+    useRealHeight: 0
+    forceMinHeight: 0
+    slicedExtrusion: 1
+    defaultRendering:
+      kind: 0
+      material: {fileID: 682235455}
+      outlineMaterial: {fileID: 0}
+      hasRoof: 0
+      roofMaterial: {fileID: 0}
+      materials: []
+      lineWidth: 0
+      outlineWidth: 0
+      polygonHeight: 0
+      tag: 
+    renderingOptions: []
+    useOnly: 
+    avoid: 
+    useTunnels: 1
+    useBridges: 1
+    useColliders: 0
+    colliderHeight: 0
+    unityLayer: 0
+    castShadows: 0
+    startInactive: 0
+    disabled: 0
+    OnFeatureLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  - layerType: 0
+    isPolygon: 0
+    outlinedPolygon: 0
+    uvMappingStyle: 0
+    useRealHeight: 0
+    forceMinHeight: 0
+    slicedExtrusion: 1
+    defaultRendering:
+      kind: 0
+      material: {fileID: 621919567}
+      outlineMaterial: {fileID: 0}
+      hasRoof: 0
+      roofMaterial: {fileID: 0}
+      materials: []
+      lineWidth: 2
+      outlineWidth: 0
+      polygonHeight: 0
+      tag: 
+    renderingOptions: []
+    useOnly: 
+    avoid: 
+    useTunnels: 1
+    useBridges: 1
+    useColliders: 0
+    colliderHeight: 0
+    unityLayer: 0
+    castShadows: 0
+    startInactive: 0
+    disabled: 0
+    OnFeatureLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  pois:
+    unityLayer: 0
+    renderingOptions: []
+    startInactive: 0
+    disabled: 0
+  labels:
+    unityLayer: 0
+    tag: 
+    streetNames:
+      textShader: {fileID: 0}
+      streetNameFont: {fileID: 0}
+      streetnameColor: {r: 0.23921569, g: 0.23921569, b: 0.3254902, a: 1}
+      fontSize: 15
+      minFontSize: 12
+      characterSize: 1
+      fontStyle: 1
+    preferredLanguage: 0
+    startInactive: 0
+    disabled: 1
+    OnLabelLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  customMapboxTilesets: []
+  useElevation: 0
+  elevationMultiplier: 1
+  terrainResolution: 50
+  runOnMainThread: 0
+  combineFeatures: 0
+  addGoFeatureComponents: 0
+  useSatelliteBackground: 0
+  satellite4X: 0
+  navmeshSettings:
+    buildNavmeshSurfaces: 0
+    AgentTypeIndex: 0
+    CollectObjects: 0
+    IncludeLayers:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    m_UseGeometry: 0
+    useNavmeshLinks: 0
+  dynamicLoad: 1
+  OnTileLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  tiles: []
 --- !u!1 &1328705551
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,8 +1240,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607302203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.000000025071824, y: 0.81915206, z: -0.57357645, w: -0.000000035806274}
+  m_LocalPosition: {x: 0, y: 600, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -934,6 +1341,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!21 &1751738133
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Legacy Shaders/Diffuse
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -942,3 +1381,4 @@ SceneRoots:
   - {fileID: 1656933719}
   - {fileID: 360539896}
   - {fileID: 1328705554}
+  - {fileID: 759019466}
