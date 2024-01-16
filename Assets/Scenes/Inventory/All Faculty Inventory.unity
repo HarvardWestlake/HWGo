@@ -578,7 +578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1203, y: 0}
+  m_AnchoredPosition: {x: 1170, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68837635
@@ -3930,7 +3930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page1: {fileID: 2145077065}
   page2: {fileID: 68837634}
-  swipeThreshold: 100
+  swipeThreshold: 20
 --- !u!1 &712455361
 GameObject:
   m_ObjectHideFlags: 0
