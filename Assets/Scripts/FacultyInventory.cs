@@ -2,12 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Assuming you have a Faculty class already defined as per your previous image
-[Serializable]
-public class Faculty
-{
-    // Add the Faculty class details here
-}
+
 
 [Serializable]
 public class FacultyMemberQuantity
