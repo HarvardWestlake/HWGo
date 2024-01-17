@@ -1,0 +1,12 @@
+# Blender 4.0.2 MTL File: 'FIRSTBALL.blend'
+# www.blender.org
+
+newmtl rojo
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Comp Sci/pokeballs/DALL·E 2023-11-28 10.29.42 - Design a fictional capture device inspired by the Poké Ball for a Harvard Westlake school themed game. The device should be spherical, with a top half.png
