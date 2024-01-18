@@ -2,22 +2,16 @@
 
 ## Notes
 
-- Characters should be 2D, because more aesthetic and a lot easier to work with and animate
-- Can't look *too* much like the actual people ... 
-- Still need to decide what we're doing about their bodies
+- Best prompt for focus: full body character sprite of fantasy character, white background, pixel art
+    - described as "an old - school computer pixel artwork with a man holding a sword"
+- Guidance: 13, sharpness: 3
 
 ## Todos
 
-- [ ] add department to image file names
+- [ ] try prompt with real vs pixel teacher
 - [x] add teacher name to file names
 - [x] pass images through cartoonify program 
 - [x] Pass cartoonified images through pixelize program
-
-## Design Log
-
-- 12/4/23 In Class: Setup some environement stuff, and added my stuff to the main repo
-
-- 12/6/23 Home: Processed theiss and varney using this process. You can find them in "pixel_heads"
 
 ### Varney
 
