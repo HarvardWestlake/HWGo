@@ -2,7 +2,29 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Assuming you have a Faculty class already defined as per your previous image
+[Serializable]
+public class Faculty
+{
+    public string id; // ID associated with faculty
+    public Department dept; // Faculty department
+    public Rarity rarity; // Rarity level, e.g., common, rare, etc.
+    public double health; // Number of health points faculty has
+    public double damage; // Number of damage points done per attack
+    public List<string> catchPrompt; // Prompts related to specific teacher that catcher must answer to catch teacher
+    //Do we need catchPrompt??
 
+    // You can also add a constructor to initialize the properties
+    public Faculty(string id, Department dept, Rarity rarity, double health, double damage, List<string> catchPrompt)
+    {
+        this.id = id;
+        this.dept = dept;
+        this.rarity = rarity;
+        this.health = health;
+        this.damage = damage;
+        this.catchPrompt = catchPrompt;
+    }
+}
 
 [Serializable]
 public class FacultyMemberQuantity
@@ -26,7 +48,7 @@ public class FacultyInventory : MonoBehaviour
     public void AddFaculty(Faculty facultyToAdd)
     {
         // Check if the faculty is already in the inventory
-        var existingFaculty = facInventory.Find(f => f.faculty.id == facultyToAdd.id);
+        var existingFaculty = facInventory.Find(f => f.faculty.id == facultyToAdd.id);//boolean
         if (existingFaculty != null)
         {
             // If found, increase the quantity

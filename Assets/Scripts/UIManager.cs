@@ -1,33 +1,39 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // Required for event system
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject panel; // Assign your panel here in the inspector
+    public GameObject panel;
+    public Button facultyImageButton;
+    public Button closeButton;
 
-    // Method to show the panel
+    void Start()
+    {
+        // Add event listeners to the buttons
+        facultyImageButton.onClick.AddListener(ShowPanel);
+        closeButton.onClick.AddListener(HidePanel);
+    }
+
     public void ShowPanel()
     {
         panel.SetActive(true);
     }
-    
-    // Method to hide the panel
+
     public void HidePanel()
     {
-        if(panel.activeSelf)
+        if (panel.activeSelf)
         {
             panel.SetActive(false);
         }
     }
 
-    // Update method to detect clicks outside the panel
     void Update()
     {
-        // Check if the panel is active and if the left mouse button is clicked
-        if (panel.activeSelf && Input.GetMouseButtonDown(0))
+        // Optional: Hide panel when tapping outside
+        if (panel.activeSelf && Input.touchCount > 0)
         {
-            // Check if the click is on the panel
-            if (!EventSystem.current.IsPointerOverGameObject())
+            var touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began && !panel.GetComponentInChildren<Collider2D>().OverlapPoint(touch.position))
             {
                 HidePanel();
             }
