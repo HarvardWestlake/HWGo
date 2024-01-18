@@ -4,7 +4,7 @@ using UnityEngine;
 
 // Assuming you have a Faculty class already defined as per your previous image
 [Serializable]
-public class Faculty
+/*public class Faculty
 {
     public string id; // ID associated with faculty
     public Department dept; // Faculty department
@@ -24,7 +24,7 @@ public class Faculty
         this.damage = damage;
         this.catchPrompt = catchPrompt;
     }
-}
+}*/
 
 [Serializable]
 public class FacultyMemberQuantity
