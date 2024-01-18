@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Assuming you have a Faculty class already defined as per your previous image
-[Serializable]
-/*public class Faculty
+/*[Serializable]
+public class Faculty
 {
     public string id; // ID associated with faculty
     public Department dept; // Faculty department
