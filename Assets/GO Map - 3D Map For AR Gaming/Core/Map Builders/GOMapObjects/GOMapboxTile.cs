@@ -55,84 +55,106 @@ namespace GoMap
             return goFeature;
         }
 
-        public override GOFeature EditFeatureData(GOFeature goFeature)
+
+public override GOFeature EditFeatureData(GOFeature goFeature)
         {
+            if (goFeature == null || goFeature.properties == null)
+            {
+                // Handle the case where goFeature or its properties are null
+                return goFeature;
+            }
 
             if (goFeature.goFeatureType == GOFeatureType.Point)
             {
+                // Handle point feature specific logic
                 goFeature.name = (string)goFeature.properties["name"];
                 return goFeature;
             }
 
             IDictionary properties = goFeature.properties;
 
-            goFeature.kind = GOEnumUtils.MapboxToKind((string)properties["class"]);
-            goFeature.name = (string)properties["class"];
-
-            if (!properties.Contains("class") && properties.Contains("type"))
+            // Verify that the required properties are present
+            if (properties.Contains("class"))
+            {
+                goFeature.kind = GOEnumUtils.MapboxToKind((string)properties["class"]);
+                goFeature.name = (string)properties["class"];
+            }
+            else if (properties.Contains("type"))
             {
                 goFeature.kind = GOEnumUtils.MapboxToKind((string)properties["type"]);
                 goFeature.name = (string)properties["type"];
             }
+            else
+            {
+                // Handle the case where neither "class" nor "type" is present
+                return goFeature;
+            }
 
             if (goFeature.layer != null && goFeature.layer.layerType == GOLayer.GOLayerType.Roads)
             {
-
-                ((GORoadFeature)goFeature).isBridge = properties.Contains("structure") && (string)properties["structure"] == "bridge";
-                if (((GORoadFeature)goFeature).isBridge) {
+                // Handle Roads layer specific logic
+                if (properties.Contains("structure") && (string)properties["structure"] == "bridge")
+                {
+                    ((GORoadFeature)goFeature).isBridge = true;
                     goFeature.kind = GOFeatureKind.bridge;
                 }
-				((GORoadFeature)goFeature).isTunnel = properties.Contains ("structure") && (string)properties ["structure"] == "tunnel";
-                if (((GORoadFeature)goFeature).isTunnel)
+
+                if (properties.Contains("structure") && (string)properties["structure"] == "tunnel")
                 {
+                    ((GORoadFeature)goFeature).isTunnel = true;
                     goFeature.kind = GOFeatureKind.tunnel;
                 }
-				((GORoadFeature)goFeature).isLink = properties.Contains ("structure") && (string)properties ["structure"] == "link";
 
-
-                //Fix for v8 streetnames
-                if (goFeature.properties.Contains("name") && !string.IsNullOrEmpty((string)goFeature.properties["name"]))
+                if (properties.Contains("structure") && (string)properties["structure"] == "link")
                 {
-                    goFeature.name = (string)goFeature.properties["name"];
+                    ((GORoadFeature)goFeature).isLink = true;
+                    // You may want to set a different kind for links, or handle it based on your requirements
                 }
-                else {
+
+                // Fix for v8 streetnames
+                if (properties.Contains("name") && !string.IsNullOrEmpty((string)properties["name"]))
+                {
+                    goFeature.name = (string)properties["name"];
+                }
+                else
+                {
                     goFeature.name = null;
                 }
-            } 
+            }
 
-//			goFeature.y = (goFeature.index / 50.0f) + goFeature.getLayerDefaultY() /150.0f;
-//			float fraction = goFeature.layer.layerType == GOLayer.GOLayerType.Buildings? 100f:10f;
-			float fraction = 20f;
-			goFeature.y = (1 + goFeature.layerIndex + goFeature.featureIndex/goFeature.featureCount)/fraction;
+            // Additional logic for height, extrude, etc.
+            bool extrude = properties.Contains("extrude") && (string)properties["extrude"] == "true";
 
-			goFeature.setRenderingOptions ();
-			goFeature.height = goFeature.renderingOptions.polygonHeight;
+            if (goFeature.layer.useRealHeight && properties.Contains("height") && extrude)
+            {
+                double h = Convert.ToDouble(properties["height"]);
+                goFeature.height = (float)h;
+            }
 
-			bool extrude = properties.Contains("extrude") && (string)properties["extrude"] == "true";
-
-			if (goFeature.layer.useRealHeight && properties.Contains("height") && extrude) {
-				double h =  Convert.ToDouble(properties["height"]);
-				goFeature.height = (float)h;
-			}
-
-			if (goFeature.layer.useRealHeight && properties.Contains("min_height") && extrude) {
-				double minHeight = Convert.ToDouble(properties["min_height"]);
-				goFeature.y = (float)minHeight;
-				goFeature.height = (float)goFeature.height - (float)minHeight;
-			} 
+            if (goFeature.layer.useRealHeight && properties.Contains("min_height") && extrude)
+            {
+                double minHeight = Convert.ToDouble(properties["min_height"]);
+                goFeature.y = (float)minHeight;
+                goFeature.height = (float)goFeature.height - (float)minHeight;
+            }
 
             if (goFeature.layer.forceMinHeight && goFeature.height < goFeature.renderingOptions.polygonHeight && goFeature.y < 0.5f)
             {
                 goFeature.height = goFeature.renderingOptions.polygonHeight;
             }
 
-			return goFeature;
+            goFeature.y = (1 + goFeature.layerIndex + goFeature.featureIndex / goFeature.featureCount) / 20f; // Adjusted fraction value
 
-		}
+            goFeature.setRenderingOptions();
+            goFeature.height = goFeature.renderingOptions.polygonHeight;
 
-		#region NETWORK
+            return goFeature;
+        }
 
-		public override string vectorUrl ()
+
+        #region NETWORK
+
+        public override string vectorUrl ()
 		{
 			var baseUrl = "https://api.mapbox.com:443/v4/";
             var tilesetID = "mapbox.mapbox-streets-v8"; //v7 
