@@ -21,5 +21,6 @@ public class PageSwitcher : MonoBehaviour
     {
         otherPage.SetActive(true);
         currPage.SetActive(false);
+        Debug.Log("SwitchPage called");
     }
 }
