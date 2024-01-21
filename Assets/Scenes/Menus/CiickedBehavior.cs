@@ -5,12 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class LoginBehavior : MonoBehaviour {
+public class ClickedBehavior : MonoBehaviour {
 
     public Button login;
 
     public Button register;
-    //public Button register;
 
     public bool isRegister;
     string username;
@@ -23,18 +22,18 @@ public class LoginBehavior : MonoBehaviour {
     {
         username = "";
         password = "";
-       // string clickedButtonName = EventSystem.current.currentSelectedGameObject.name;
-      //  if(clickedButtonName == "Register")
-       // {
+        string clickedButtonName = EventSystem.current.currentSelectedGameObject.name;
+        if(clickedButtonName == "Register")
+        {
             isRegister = true;
             register.onClick.AddListener(getUsernameInfoOnClick);
             register.onClick.AddListener(getPasswordInfoOnClick);
-     //   }
-      //  else
-      //  {
+        }
+        else
+        {
             login.onClick.AddListener(getUsernameInfoOnClick);
             login.onClick.AddListener(getPasswordInfoOnClick);
-     //   } 
+        } 
     
     }
 
