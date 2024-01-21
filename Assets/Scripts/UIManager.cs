@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
@@ -39,4 +39,4 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-}
+}*/
