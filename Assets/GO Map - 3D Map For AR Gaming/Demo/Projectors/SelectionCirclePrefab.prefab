@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &422170
 Transform:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ Projector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166266}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_NearClipPlane: 1
   m_FarClipPlane: 15.96
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5c73d91a0a88478499345c7ff27bf5f, type: 3}
   m_Name: 
