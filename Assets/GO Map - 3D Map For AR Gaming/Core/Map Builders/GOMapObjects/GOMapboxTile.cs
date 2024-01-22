@@ -145,8 +145,11 @@ public override GOFeature EditFeatureData(GOFeature goFeature)
 
             goFeature.y = (1 + goFeature.layerIndex + goFeature.featureIndex / goFeature.featureCount) / 20f; // Adjusted fraction value
 
-            goFeature.setRenderingOptions();
-            goFeature.height = goFeature.renderingOptions.polygonHeight;
+            if (goFeature.renderingOptions != null)
+            {
+                goFeature.setRenderingOptions();
+            }
+
 
             return goFeature;
         }

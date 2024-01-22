@@ -18,17 +18,24 @@ public class MapBoundsController : MonoBehaviour
             // Subscribe to GoMap events with parameters
             goMap.OnLocationChangedEvent += OnLocationChanged;
             goMap.OnOriginSetEvent += OnOriginSet;
-
         }
         else
         {
             Debug.LogError("GoMap reference is null. Please assign a valid GoMap instance to goMap.");
         }
     }
+
     private void OnLocationChanged(Coordinates currentLocation)
     {
         // Handle OnLocationChanged event with parameters
         Debug.Log("Location changed: " + currentLocation);
+
+        // Check if the location is within bounds
+        if (!IsLocationInBounds(currentLocation))
+        {
+            // If outside bounds, destroy the map
+            goMap.DestroyCurrentMap();
+        }
     }
 
     // Callback for GoMap OnOriginSet event with parameters
@@ -36,6 +43,13 @@ public class MapBoundsController : MonoBehaviour
     {
         // Handle OnOriginSet event with parameters
         Debug.Log("Origin set: " + currentLocation);
+
+        // Check if the location is within bounds
+        if (!IsLocationInBounds(currentLocation))
+        {
+            // If outside bounds, destroy the map
+            goMap.DestroyCurrentMap();
+        }
     }
 
     void Update()
@@ -48,35 +62,21 @@ public class MapBoundsController : MonoBehaviour
         }
     }
 
-    void OnLocationChangedHandler(Coordinates currentLocation)
-    {
-        // Handle location changed event
-        LoadMapBasedOnBounds(currentLocation);
-    }
-
-    void OnOriginSetHandler(Coordinates currentLocation)
-    {
-        // Handle origin set event
-        LoadMapBasedOnBounds(currentLocation);
-    }
-
     IEnumerator LoadMapBasedOnBounds(Coordinates location)
     {
         Debug.Log("Bounds: minLat=" + minLatitude + ", maxLat=" + maxLatitude + ", minLon=" + minLongitude + ", maxLon=" + maxLongitude);
 
+        // Check if the location is within bounds
         if (IsLocationInBounds(location))
         {
-            Debug.Log("Location is within bounds. Loading map...");
-            goMap.DestroyCurrentMap();
+            // Load the map only if the location is within bounds
             yield return goMap.ReloadMap(location, true);
-            Debug.Log("Map loaded successfully.");
         }
         else
         {
             Debug.LogWarning("Current location is outside the specified bounds.");
         }
     }
-
 
     bool IsLocationInBounds(Coordinates location)
     {
