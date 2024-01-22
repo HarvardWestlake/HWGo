@@ -7,30 +7,36 @@ Welcome to Harvard Westlake Adventure, a mobile augmented reality game that tran
 Harvard Westlake Adventure serves as both an entertaining game and an educational tool. Players learn about the school's history, faculty, and landmarks while engaging in a fun, interactive scavenger hunt. By collecting virtual representations of teachers and notable alumni, users deepen their connection with the school's legacy. This game also promotes physical activity and exploration of the campus, enhancing school spirit and community engagement.
 
 **User Interaction and Experience**
-Users will interact with the game via their smartphones, exploring the Harvard Westlake campus to find and collect virtual characters. The game uses GPS and AR technology to overlay the virtual world onto the real campus, creating an immersive experience. Players can collect different faculty members, each with unique attributes and historical facts, by visiting specific campus locations. Social features, such as leaderboards and team challenges, encourage interaction among players.
+Users will interact with the game via their smartphones, exploring the Harvard Westlake campus to find and collect virtual characters. The game uses GPS and AR technology to overlay the virtual world onto the real campus, creating an immersive experience. Players can collect different faculty members, each with unique attributes and historical facts, by visiting specific campus locations. Social features, such as leaderboards and team challenges, encourage interaction among players. Once a player collects a certain amount of teachers, then they gain access to certain final battles that can earn them special achievements.
+
 
 **Competitive Element**
-Competition is a key aspect of Harvard Westlake Adventure. Players can form teams based on their school houses or graduation years, competing in weekly challenges to collect rare characters or complete historical quests. Leaderboards display top collectors and teams, fostering a friendly rivalry that promotes continuous engagement with the game.
+Competition is a key aspect of Harvard Westlake Adventure. Players can form teams based on their school houses or graduation years, competing in weekly challenges to collect rare characters or complete historical quests. Leaderboards display top collectors and teams, fostering a friendly rivalry that promotes continuous engagement with the game. 
+
+
 
 **Engagement and Addictiveness Strategies**
 The game employs various strategies to ensure player engagement and retention:
 
-**Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting.
+**Regular Content Updates:** New characters and quests are added regularly, keeping the game fresh and exciting. The map can also be updated regularly, in tune with seasons or certain events that are happening across campus.
 
-**Achievement System:** Players earn badges and rewards for completing collections and special challenges.
+**Achievement System:** Players earn badges and rewards for completing collections and special challenges. There can also be a couple of collaborative challenges, which forces students to interact with other students in order to complete certain challenges, which can be used to foster a sense of community amongst players. 
 
-**Social Features:** Integration with social media allows players to share achievements and compete with friends.
+**Social Features:** Integration with social media allows players to share achievements and compete with friends. There could also be an in-game chat feature, so that players can communicate with other players in real time. You can also introduce the idea of clubs within the game so that students with similar interests can come together to complete challenges and strategize.
 
 **Event-Driven Gameplay:** Special events, tied to school calendar highlights, offer unique gameplay experiences.
 
+**Guest Appearances:**
+You can occasionally introduce "guest appearances" in the form of HW alumni to participate in the game. There could be special challenges and rewards tied to their apperance, as well as exclusive in-game events based around that alumni.
+
 **Scalability and Expansion**
-Harvard Westlake Adventure is designed with scalability in mind. The game can easily be expanded to include new areas of the campus, additional characters, and even virtual representations of significant school events. The flexible architecture allows for easy adaptation to other schools or educational institutions, offering a template for gamified campus exploration.
+Harvard Westlake Adventure is designed with scalability in mind. The game can easily be expanded to include new areas of the campus, additional characters, and even virtual representations of significant school events. The flexible architecture allows for easy adaptation to other schools or educational institutions, offering a template for gamified campus exploration. Also, the app's integration with social media will allow for the app to be much easier for players outside of Harvard Westlake to enjoy.
 
 **Accessibility and Inclusivity**
 Adhering to the California non-discrimination clause, Harvard Westlake Adventure is designed to be accessible and inclusive for all users. The game includes:
 
 **Adaptive Features:**
-Options for colorblind mode, scalable text, and simplified controls. Different teacahers can be added to the game
+Options for colorblind mode, scalable text, and simplified controls. Different teachers can be added to the game. Teachers could also maybe have recorded voicelines when you interact with them in the app, making the game feel more immersive.
 
 **Diverse Representation:** Characters and narratives that reflect the diversity of the Harvard Westlake community.
 
