@@ -948,6 +948,7 @@ GameObject:
   - component: {fileID: 701075711}
   - component: {fileID: 701075710}
   - component: {fileID: 701075709}
+  - component: {fileID: 701075712}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -1018,7 +1019,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 701075710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 701075712}
+        m_TargetAssemblyTypeName: OnClick, Assembly-CSharp
+        m_MethodName: LoadBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701075710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1070,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701075707}
   m_CullTransparentMesh: 1
+--- !u!114 &701075712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701075707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e828d87379da4f73848757112bc84bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801543550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,8 +1636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b811999e4334f989c25d00ebe2eb15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnClick: {fileID: 701075709}
-  username: {fileID: 913859568}
+  login: {fileID: 701075709}
+  register: {fileID: 2029313301}
+  isRegister: 0
+  usernameIF: {fileID: 913859568}
+  passwordIF: {fileID: 381853115}
 --- !u!1 &1457214532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,6 +1879,7 @@ GameObject:
   - component: {fileID: 2029313303}
   - component: {fileID: 2029313302}
   - component: {fileID: 2029313301}
+  - component: {fileID: 2029313304}
   m_Layer: 5
   m_Name: Register
   m_TagString: Untagged
@@ -1921,7 +1950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2029313302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2029313304}
+        m_TargetAssemblyTypeName: OnClick, Assembly-CSharp
+        m_MethodName: LoadBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2029313302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,6 +2001,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029313299}
   m_CullTransparentMesh: 1
+--- !u!114 &2029313304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029313299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e828d87379da4f73848757112bc84bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131673708
 GameObject:
   m_ObjectHideFlags: 0

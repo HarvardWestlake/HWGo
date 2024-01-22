@@ -10,7 +10,6 @@ public class LoginBehavior : MonoBehaviour {
     public Button login;
 
     public Button register;
-    //public Button register;
 
     public bool isRegister;
     string username;
@@ -23,18 +22,14 @@ public class LoginBehavior : MonoBehaviour {
     {
         username = "";
         password = "";
-       // string clickedButtonName = EventSystem.current.currentSelectedGameObject.name;
-      //  if(clickedButtonName == "Register")
-       // {
-            isRegister = true;
+
+        
+        isRegister = false;
             register.onClick.AddListener(getUsernameInfoOnClick);
             register.onClick.AddListener(getPasswordInfoOnClick);
-     //   }
-      //  else
-      //  {
             login.onClick.AddListener(getUsernameInfoOnClick);
             login.onClick.AddListener(getPasswordInfoOnClick);
-     //   } 
+
     
     }
 
