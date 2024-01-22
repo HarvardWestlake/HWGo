@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 1e2d5ab7bde934860bd21b1c90f30911
+<<<<<<< HEAD
+guid: f3f907852045f4156bf8fc774940934b
+=======
+guid: 2092675de04174668b89f65cab34793b
+>>>>>>> LoginPage
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
