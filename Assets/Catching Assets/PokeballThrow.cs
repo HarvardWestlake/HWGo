@@ -32,7 +32,7 @@ public class PokeballThrow : MonoBehaviour
     private void Update()
     {
         if (_holding)
-            OnTouch();
+            OnMouseHold();
 
         _curve = (Mathf.Abs(_curveAmount) > _minCurveAmountToCurveBall);
 
@@ -50,10 +50,9 @@ public class PokeballThrow : MonoBehaviour
         if (_thrown)
             return;
 
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.GetMouseButtonDown(0))
         {
-            //for pc = if(Input.GetButtonDown(0)){
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position); //for pc = Input.mousePosition
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100f))
@@ -66,26 +65,25 @@ public class PokeballThrow : MonoBehaviour
             }
         }
 
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        if (Input.GetMouseButtonUp(0))
         {
-            //for pc = if(Input.GetButtonUp(0)){
-            if (_lastMouseY < Input.GetTouch(0).position.y)
+            Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            if (_lastMouseY < mousePos.y)
             {
-                ThrowBall(Input.GetTouch(0).position);
+                ThrowBall(mousePos);
             }
         }
 
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButton(0))
         {
-            //for pc = if(Input.GetButton(0)){
-            _lastMouseX = Input.GetTouch(0).position.x;
-            _lastMouseY = Input.GetTouch(0).position.y;
+            _lastMouseX = Input.mousePosition.x;
+            _lastMouseY = Input.mousePosition.y;
 
             if (_lastMouseX < _circlingBox.x)
             {
                 _circlingBox.x = _lastMouseX;
             }
-            if (_lastMouseX < _circlingBox.xMax)
+            if (_lastMouseX > _circlingBox.xMax)
             {
                 _circlingBox.xMax = _lastMouseX;
             }
@@ -94,7 +92,7 @@ public class PokeballThrow : MonoBehaviour
             {
                 _circlingBox.y = _lastMouseY;
             }
-            if (_lastMouseY < _circlingBox.yMax)
+            if (_lastMouseY > _circlingBox.yMax)
             {
                 _circlingBox.yMax = _lastMouseY;
             }
@@ -118,47 +116,41 @@ public class PokeballThrow : MonoBehaviour
         transform.SetParent(Camera.main.transform);
     }
 
-    private void OnTouch()
+    private void OnMouseHold()
     {
-        if (Input.touchCount > 0)
-        {
-            CalcCurveAmount();
+        CalcCurveAmount();
 
-            Vector3 mousePos = Input.GetTouch(0).position;
-            mousePos.z = Camera.main.nearClipPlane * 30f;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane * 30f;
 
-            _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
-            transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
-        }
+        transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
     }
 
     private void CalcCurveAmount()
     {
-        if (Input.touchCount > 0)
+        Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
+        Vector2 c = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 a = _circlingBox.center;
+
+        if (b == c)
         {
-            Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
-            Vector2 c = Input.GetTouch(0).position;
-            Vector2 a = _circlingBox.center;
-
-            if (b == c)
-            {
-                return;
-            }
-
-            bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
-
-            if (isLeft)
-            {
-                _curveAmount -= Time.deltaTime * _curveSpeed;
-            }
-            else
-            {
-                _curveAmount += Time.deltaTime * _curveSpeed;
-            }
-
-            _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
+            return;
         }
+
+        bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
+
+        if (isLeft)
+        {
+            _curveAmount -= Time.deltaTime * _curveSpeed;
+        }
+        else
+        {
+            _curveAmount += Time.deltaTime * _curveSpeed;
+        }
+
+        _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
     }
 
     private void ThrowBall(Vector2 mousePos)
