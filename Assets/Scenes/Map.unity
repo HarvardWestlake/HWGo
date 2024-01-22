@@ -887,11 +887,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: zoomLevel
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: tileBuffer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: satellite4X
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: useElevation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: pois.disabled
@@ -918,11 +926,43 @@ PrefabInstance:
       value: pk.eyJ1IjoiYm9udW51MjAyIiwiYSI6ImNscjNzeW1oZTFnbm4yaXBlOTEyM2QwZXYifQ.ZPwP58WlfcWN0fqxHEQ0tA
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: elevationMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: addGoFeatureComponents
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: useSatelliteBackground
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].isPolygon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].isPolygon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].unityLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].useTunnels
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[1].castShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].castShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].castShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
@@ -942,6 +982,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].useRealHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].colliderHeight
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].outlinedPolygon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].outlinedPolygon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].avoid.Array.data[0]
       value: 244
       objectReference: {fileID: 0}
@@ -958,9 +1014,29 @@ PrefabInstance:
       value: 232
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.kind
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: pois.renderingOptions.Array.data[0].prefab
       value: 
       objectReference: {fileID: 545330089}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.hasRoof
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.lineWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.roofMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ccfb5ee011c8044db94f19ceb1ebe876, type: 2}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.polygonHeight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].renderingOptions.Array.data[0].kind
       value: 239
@@ -976,6 +1052,14 @@ PrefabInstance:
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].renderingOptions.Array.data[3].kind
       value: 242
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].OnFeatureLoad.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].OnFeatureLoad.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
