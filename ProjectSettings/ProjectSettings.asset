@@ -9,7 +9,7 @@ PlayerSettings:
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
   defaultScreenOrientation: 4
-  targetDevice: 2
+  targetDevice: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
@@ -185,7 +185,7 @@ PlayerSettings:
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 12.0
+  iOSTargetOSVersionString: 16.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 12.0
@@ -243,7 +243,7 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileType: 0
   VisionOSManualSigningProvisioningProfileType: 0
   appleEnableAutomaticSigning: 0
-  iOSRequireARKit: 0
+  iOSRequireARKit: 1
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
@@ -473,6 +473,7 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 4
       m_SubKind: App Store
+<<<<<<< HEAD
   - m_BuildTarget: tvOS
     m_Icons:
     - m_Textures: []
@@ -510,6 +511,8 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
+=======
+>>>>>>> origin/main
   m_BuildTargetBatching: []
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
@@ -545,7 +548,7 @@ PlayerSettings:
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
   cameraUsageDescription: Required For AR.
-  locationUsageDescription: 
+  locationUsageDescription: Needs to track location to follow avatar
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
   macOSTargetOSVersion: 10.13.0
@@ -795,7 +798,8 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    iPhone: UNITY_XR_ARKIT_LOADER_ENABLED
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
