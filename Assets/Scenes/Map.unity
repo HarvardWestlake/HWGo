@@ -1290,6 +1290,57 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &725107666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725107668}
+  - component: {fileID: 725107667}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &725107667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725107666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04294c067d0741dd9ff8f92d11d04db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonPrefabs:
+  - {fileID: 8200557308674916553, guid: 8194d48c098884a7a831e37d3bbf23e9, type: 3}
+  latitudeMin: 34.139378
+  latitudeMax: 34.14174
+  longitudeMin: -118.4105
+  longitudeMax: -118.4142
+  goMap: {fileID: 1044621998}
+--- !u!4 &725107668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725107666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.12988, y: 31.970612, z: -0.5999742}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044621998 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6,
@@ -1889,3 +1940,4 @@ SceneRoots:
   - {fileID: 675609287}
   - {fileID: 1379913657}
   - {fileID: 557054844}
+  - {fileID: 725107668}
