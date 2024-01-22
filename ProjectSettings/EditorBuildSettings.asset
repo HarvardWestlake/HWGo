@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inventory/InventoryAll.unity
     guid: 1355e2ebbe4c242608b763f70662ba44
+  - enabled: 1
+    path: Assets/Scenes/Menus/Login.unity
+    guid: 1d6e951b4513d48caabbec59ed0eae14
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
