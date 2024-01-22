@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2d87cb8f3244a4de18327439567df688
+=======
+guid: d2ef3a36f10374c3b8ac983e0eeddc68
+>>>>>>> LoginPage
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
