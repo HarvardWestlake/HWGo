@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CatchProfessor.unity
     guid: b1cb2aec0704d0646bf8fa1b24677801
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 331e65508a1194ad58e0fcfb4ca518b4
+  - enabled: 1
+    path: Assets/Scenes/Settings/SettingsGeneral.unity
+    guid: a82d26be0447a45478f250dcb68311c0
+  - enabled: 1
+    path: Assets/Scenes/Inventory/InventoryAll.unity
+    guid: 1355e2ebbe4c242608b763f70662ba44
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
@@ -31,5 +40,5 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 58f40b12bbc864f3c96c6505a9a1e1e3,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 73eee4be54b2e4981935ca06c64c3036,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 2d87cb8f3244a4de18327439567df688,
       type: 2}
