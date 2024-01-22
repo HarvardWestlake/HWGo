@@ -180,11 +180,21 @@ namespace GoMap
 			}
 	    }
 
+        internal void BuildMapPortionInsideEditor(Coordinates location, GOMapInspector.CustomCoordinatesBounds portionBounds)
+        {
+            throw new NotImplementedException();
+        }
+
 
 		#region Location Manager Events
+		public event Action<Coordinates> OnLocationChangedEvent;
+		public event Action<Coordinates> OnOriginSetEvent;
 
 		public void OnLocationChanged (Coordinates currentLocation) {
-
+			if (OnLocationChangedEvent != null)
+			{
+				OnLocationChangedEvent.Invoke(currentLocation);
+			}
 			if (tileBackground != null /*&& Application.isMobilePlatform*/) {
 				DestroyTemporaryMapBackground ();
 			}
@@ -194,6 +204,10 @@ namespace GoMap
 
 		public void OnOriginSet (Coordinates currentLocation) {
 
+			if (OnOriginSetEvent != null)
+			{
+				OnOriginSetEvent.Invoke(currentLocation);
+			}
 			//if (locationManager.demoLocation == DemoLocation.SearchMode)
 			DestroyCurrentMap ();
 
