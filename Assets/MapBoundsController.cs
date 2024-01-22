@@ -18,6 +18,7 @@ public class MapBoundsController : MonoBehaviour
             // Subscribe to GoMap events with parameters
             goMap.OnLocationChangedEvent += OnLocationChanged;
             goMap.OnOriginSetEvent += OnOriginSet;
+
         }
         else
         {
@@ -61,17 +62,21 @@ public class MapBoundsController : MonoBehaviour
 
     IEnumerator LoadMapBasedOnBounds(Coordinates location)
     {
+        Debug.Log("Bounds: minLat=" + minLatitude + ", maxLat=" + maxLatitude + ", minLon=" + minLongitude + ", maxLon=" + maxLongitude);
+
         if (IsLocationInBounds(location))
         {
-            // Load the map only if the location is within bounds
+            Debug.Log("Location is within bounds. Loading map...");
             goMap.DestroyCurrentMap();
             yield return goMap.ReloadMap(location, true);
+            Debug.Log("Map loaded successfully.");
         }
         else
         {
             Debug.LogWarning("Current location is outside the specified bounds.");
         }
     }
+
 
     bool IsLocationInBounds(Coordinates location)
     {
