@@ -47,7 +47,8 @@ namespace GoMap
 		[Regex (@"^(?!\s*$).+", "Please insert your MapBox Access Token")]public string mapbox_accessToken = "";
 		[Regex (@"^(?!\s*$).+", "Please insert your OSM API key")]public string osm_api_key = "";
 		[Regex (@"^(?!\s*$).+", "Please insert your Nextzen API key")] public string nextzen_api_key = "";
-		[Regex(@"^(?!\s*$).+", "Please insert your Protomaps API key")] public string protomaps_api_key = "";
+
+        [Regex(@"^(?!\s*$).+", "Please insert your Protomaps API key")] public string protomaps_api_key = "";
 
 		
 			
@@ -179,11 +180,6 @@ namespace GoMap
 				CreateTemporaryMapBackground ();
 			}
 	    }
-
-        internal void BuildMapPortionInsideEditor(Coordinates location, GOMapInspector.CustomCoordinatesBounds portionBounds)
-        {
-            throw new NotImplementedException();
-        }
 
 
 		#region Location Manager Events
