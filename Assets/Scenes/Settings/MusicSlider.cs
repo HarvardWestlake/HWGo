@@ -1,32 +1,30 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio; // Required for Audio Mixer
+using TMPro;
 
 public class MusicSliderScript : MonoBehaviour
 {
     public AudioMixer audioMixer; // Assign your AudioMixer in the inspector
-    private Slider musicSlider;
+    public Slider musicSlider;
     private const string musicVolumeKey = "MusicVolume"; // A key for PlayerPrefs
+    public TextMeshProUGUI musicVolumeText;
 
     void Start()
     {
-        musicSlider = GetComponent<Slider>();
+        // musicSlider = GetComponent<Slider>();
 
-        if (musicSlider == null)
-    {
-        Debug.LogError("MusicSlider component not found on the GameObject.");
-        return; // Exit the method to prevent further errors
-    }
-        
         // Load the saved volume if it exists, use a default value otherwise
         float savedVolume = PlayerPrefs.GetFloat(musicVolumeKey, 0.75f); // Default value of 0.75 if not set
         musicSlider.value = savedVolume;
-        
+
         // Apply the loaded value to the AudioMixer
         SetMusicVolume(savedVolume);
 
         // Update the AudioMixer volume when the slider's value changes
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
+
+        musicVolumeText.text = (savedVolume * 100).ToString("0") + " <#636363>/ 100";
     }
 
     public void SetMusicVolume(float value)
@@ -37,5 +35,7 @@ public class MusicSliderScript : MonoBehaviour
         // Save the current value to PlayerPrefs
         PlayerPrefs.SetFloat(musicVolumeKey, value);
         PlayerPrefs.Save();
+
+        musicVolumeText.text = (value * 100).ToString("0") + " <#636363>/ 100";
     }
 }
