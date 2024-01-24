@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections.Generic;
 
 public enum Department
@@ -41,3 +41,4 @@ public class Faculty
 
     // You might also want to add methods to handle the faculty's behaviors, like taking damage or performing an action.
 }
+*/
