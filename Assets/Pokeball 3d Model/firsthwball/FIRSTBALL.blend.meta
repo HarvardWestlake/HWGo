@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f02ceeacaa26f4ed9adb192056fe862a
+=======
+guid: 481022563ebf043a6bb7ca68341eab3c
+>>>>>>> LoginPage
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
