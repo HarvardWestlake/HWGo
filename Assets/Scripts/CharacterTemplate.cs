@@ -31,9 +31,10 @@ public class Faculty
     public double Health { get; set; }
     public double Damage { get; set; }
     public string SpecialAttack { get; set; }
+    public Texture2D Image { get; set; }
 
     // Constructor for the Faculty class
-    public Faculty(string id, string name, Department dept, Rarity rarity, double health, double damage, string attack)
+    public Faculty(string id, string name, Department dept, Rarity rarity, double health, double damage, string attack, string imagePath)
     {
         Id = id;
         Name = name;
@@ -42,6 +43,7 @@ public class Faculty
         Health = health;
         Damage = damage;
         SpecialAttack = attack;
+        LoadImage(imagePath);
     }
 
     public Faculty()
@@ -53,6 +55,14 @@ public class Faculty
         Health = 150.0;
         Damage = 173;
         SpecialAttack = "The Varney Special";
+        LoadImage("varney pixel");
+    }
+
+    private void LoadImage(string imagePath)
+    {
+        // Resources.Load<Texture2D> assumes the path is relative to a Resources folder in your Assets directory.
+        // The image must also be marked as readable in the import settings to be loaded at runtime.
+        Image = Resources.Load<Texture2D>(imagePath);
     }
 }
 
