@@ -1,5 +1,4 @@
-public class CharacterTemplate {
-    using System;
+using System;
 using System.Collections;
 
 // Define the enums that represent department and rarity
@@ -84,7 +83,10 @@ public class CharacterTemplate
         FacultyList.Add(faculty);
     }
 
-    Faculty varney = new Faculty();
-    FacultyList.Add(varney);
-}
+    public void AddVarney(Faculty faculty)
+    {
+        Faculty varney = new Faculty();
+        FacultyList.Add(varney);
+    }
+
 }
