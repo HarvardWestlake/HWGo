@@ -152,7 +152,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1001d76123074f35aac7ce2a1379546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  admin: {fileID: 0}
+  art: {fileID: 0}
+  english: {fileID: 0}
+  fight: {fileID: 0}
+  grass: {fileID: 0}
+  history: {fileID: 0}
+  language: {fileID: 0}
+  maintenance: {fileID: 0}
+  math: {fileID: 0}
+  pairot: {fileID: 0}
   sceneName: Map
+  musicTransition: {fileID: 0}
 --- !u!4 &5680392
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6d3468414a5544a89a3427b02ec221ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -272,13 +283,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210496076}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.01, y: -0.17, z: 11.92}
   m_LocalScale: {x: 1.3376, y: 2.225, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &422218013
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +319,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082

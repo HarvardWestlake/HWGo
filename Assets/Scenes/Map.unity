@@ -754,11 +754,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: zoomLevel
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: tileBuffer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: satellite4X
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: useElevation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: pois.disabled
@@ -785,11 +793,43 @@ PrefabInstance:
       value: pk.eyJ1IjoiYm9udW51MjAyIiwiYSI6ImNscjNzeW1oZTFnbm4yaXBlOTEyM2QwZXYifQ.ZPwP58WlfcWN0fqxHEQ0tA
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: elevationMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: addGoFeatureComponents
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: useSatelliteBackground
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].isPolygon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].isPolygon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].unityLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].useTunnels
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[1].castShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].castShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].castShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
@@ -809,6 +849,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].useRealHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].colliderHeight
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].outlinedPolygon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[3].outlinedPolygon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].avoid.Array.data[0]
       value: 244
       objectReference: {fileID: 0}
@@ -825,9 +881,29 @@ PrefabInstance:
       value: 232
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.kind
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: pois.renderingOptions.Array.data[0].prefab
       value: 
       objectReference: {fileID: 545330089}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.hasRoof
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.lineWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.roofMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ccfb5ee011c8044db94f19ceb1ebe876, type: 2}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.polygonHeight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].renderingOptions.Array.data[0].kind
       value: 239
@@ -843,6 +919,14 @@ PrefabInstance:
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].renderingOptions.Array.data[3].kind
       value: 242
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].OnFeatureLoad.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].OnFeatureLoad.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -861,6 +945,7 @@ GameObject:
   - component: {fileID: 675609286}
   - component: {fileID: 675609289}
   - component: {fileID: 675609288}
+  - component: {fileID: 675609290}
   m_Layer: 0
   m_Name: LocationManager
   m_TagString: Untagged
@@ -979,6 +1064,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &675609290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675609285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0697409a811b41fbae8b57711e92c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonPrefabs: []
+  latitudeMin: 0
+  latitudeMax: 0
+  longitudeMin: 0
+  longitudeMax: 0
+  goMap: {fileID: 0}
 --- !u!1 &680024014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,8 +1721,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonPrefabs:
-  - {fileID: 191634, guid: 45ab07dc58f034ade95a5bfaa0fca008, type: 3}
-  - {fileID: 191634, guid: 45ab07dc58f034ade95a5bfaa0fca008, type: 3}
+  - {fileID: 544392202563503846, guid: 6f2fc96a1ad64440aacd3346c6d3d2e2, type: 3}
+  - {fileID: 544392202563503846, guid: d2ac0bf8d8b0b46e0a7f026e24a387f8, type: 3}
+  - {fileID: 544392202563503846, guid: 5c9098fdfbe4f4a878d449002ac30231, type: 3}
+  - {fileID: 544392202563503846, guid: a5c649a35acad46e09e16d293f94e2d1, type: 3}
+  - {fileID: 544392202563503846, guid: ee66fdeb29d82443cb89f2f2068fc9b7, type: 3}
+  - {fileID: 544392202563503846, guid: fee557b8bb7b248058a0f2021f3b0ec4, type: 3}
   latitudeMin: 34.142094
   latitudeMax: 34.139095
   longitudeMin: -118.41412

@@ -33,7 +33,7 @@ public class PokeballThrow : MonoBehaviour
     private void Update()
     {
         if (_holding)
-            OnTouch();
+            OnMouseHold();
 
         _curve = (Mathf.Abs(_curveAmount) > _minCurveAmountToCurveBall);
 
@@ -111,47 +111,41 @@ public class PokeballThrow : MonoBehaviour
         transform.SetParent(Camera.main.transform);
     }
 
-    private void OnTouch()
+    private void OnMouseHold()
     {
-        if (Input.touchCount > 0)
-        {
-            CalcCurveAmount();
+        CalcCurveAmount();
 
-            Vector3 mousePos = Input.GetTouch(0).position;
-            mousePos.z = Camera.main.nearClipPlane * 30f;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane * 30f;
 
-            _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
-            transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
-        }
+        transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
     }
 
     private void CalcCurveAmount()
     {
-        if (Input.touchCount > 0)
+        Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
+        Vector2 c = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 a = _circlingBox.center;
+
+        if (b == c)
         {
-            Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
-            Vector2 c = Input.GetTouch(0).position;
-            Vector2 a = _circlingBox.center;
-
-            if (b == c)
-            {
-                return;
-            }
-
-            bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
-
-            if (isLeft)
-            {
-                _curveAmount -= Time.deltaTime * _curveSpeed;
-            }
-            else
-            {
-                _curveAmount += Time.deltaTime * _curveSpeed;
-            }
-
-            _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
+            return;
         }
+
+        bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
+
+        if (isLeft)
+        {
+            _curveAmount -= Time.deltaTime * _curveSpeed;
+        }
+        else
+        {
+            _curveAmount += Time.deltaTime * _curveSpeed;
+        }
+
+        _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
     }
 
     private float minThrowSpeed = 5f;
