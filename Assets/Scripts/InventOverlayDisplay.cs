@@ -12,7 +12,9 @@ public class InventOverlayDisplay : MonoBehaviour
     void Start()
     {
         // Initialize your FacultyList here with all faculty members
-        FacultyList = ...;
+        FacultyList = new ArrayList();
+        // Add Faculty objects to the list here
+        // For example: FacultyList.Add(new Faculty(...));
     }
 
     // This method will be called when the button is clicked
@@ -39,5 +41,10 @@ public class InventOverlayDisplay : MonoBehaviour
         // NameText.text = faculty.Name;
         // DepartmentText.text = faculty.Dept.ToString();
         // and so on...
+    }
+
+    public void OnButtonClickWithId1()
+    {
+        OnButtonClick("0001"); // "0001" is the ID for a specific faculty
     }
 }
