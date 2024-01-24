@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PokeballThrow : MonoBehaviour
@@ -32,7 +33,7 @@ public class PokeballThrow : MonoBehaviour
     private void Update()
     {
         if (_holding)
-            OnTouch();
+            OnMouseHold();
 
         _curve = (Mathf.Abs(_curveAmount) > _minCurveAmountToCurveBall);
 
@@ -50,56 +51,48 @@ public class PokeballThrow : MonoBehaviour
         if (_thrown)
             return;
 
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            //for pc = if(Input.GetButtonDown(0)){
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position); //for pc = Input.mousePosition
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                if (hit.transform == transform)
-                {
-                    _holding = true;
-                    transform.SetParent(null);
-                }
-            }
-        }
-
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            //for pc = if(Input.GetButtonUp(0)){
-            if (_lastMouseY < Input.GetTouch(0).position.y)
-            {
-                ThrowBall(Input.GetTouch(0).position);
-            }
-        }
-
         if (Input.touchCount == 1)
         {
-            //for pc = if(Input.GetButton(0)){
-            _lastMouseX = Input.GetTouch(0).position.x;
-            _lastMouseY = Input.GetTouch(0).position.y;
+            Touch touch = Input.GetTouch(0);
 
-            if (_lastMouseX < _circlingBox.x)
+            switch (touch.phase)
             {
-                _circlingBox.x = _lastMouseX;
-            }
-            if (_lastMouseX < _circlingBox.xMax)
-            {
-                _circlingBox.xMax = _lastMouseX;
-            }
+                case TouchPhase.Began:
+                    // Start of a new touch.
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hit;
 
-            if (_lastMouseY < _circlingBox.y)
-            {
-                _circlingBox.y = _lastMouseY;
-            }
-            if (_lastMouseY < _circlingBox.yMax)
-            {
-                _circlingBox.yMax = _lastMouseY;
+                    if (Physics.Raycast(ray, out hit, 100f))
+                    {
+                        if (hit.transform == transform)
+                        {
+                            _holding = true;
+                            transform.SetParent(null);
+                        }
+                    }
+                    break;
+
+                case TouchPhase.Moved:
+                    // Update the last touch position for curve calculation.
+                    _lastMouseX = touch.position.x;
+                    _lastMouseY = touch.position.y;
+                    break;
+
+                case TouchPhase.Ended:
+                    // Swipe ended, now throw the ball.
+                    Vector2 swipeVelocity = (touch.position - touch.deltaPosition) / touch.deltaTime;
+                    ThrowBall(swipeVelocity);
+                    break;
             }
         }
     }
+
+    private IEnumerator DelayedReset()
+    {
+        yield return new WaitForSeconds(5.0f);
+        Reset();
+    }
+
 
     public void Reset()
     {
@@ -118,66 +111,69 @@ public class PokeballThrow : MonoBehaviour
         transform.SetParent(Camera.main.transform);
     }
 
-    private void OnTouch()
+    private void OnMouseHold()
     {
-        if (Input.touchCount > 0)
-        {
-            CalcCurveAmount();
+        CalcCurveAmount();
 
-            Vector3 mousePos = Input.GetTouch(0).position;
-            mousePos.z = Camera.main.nearClipPlane * 30f;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane * 30f;
 
-            _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        _newPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
-            transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
-        }
+        transform.localPosition = Vector3.Lerp(transform.localPosition, _newPosition, 50f * Time.deltaTime);
     }
 
     private void CalcCurveAmount()
     {
-        if (Input.touchCount > 0)
+        Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
+        Vector2 c = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 a = _circlingBox.center;
+
+        if (b == c)
         {
-            Vector2 b = new Vector2(_lastMouseX, _lastMouseY);
-            Vector2 c = Input.GetTouch(0).position;
-            Vector2 a = _circlingBox.center;
-
-            if (b == c)
-            {
-                return;
-            }
-
-            bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
-
-            if (isLeft)
-            {
-                _curveAmount -= Time.deltaTime * _curveSpeed;
-            }
-            else
-            {
-                _curveAmount += Time.deltaTime * _curveSpeed;
-            }
-
-            _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
+            return;
         }
+
+        bool isLeft = ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)) > 0; // a = mid, b = last, c = now
+
+        if (isLeft)
+        {
+            _curveAmount -= Time.deltaTime * _curveSpeed;
+        }
+        else
+        {
+            _curveAmount += Time.deltaTime * _curveSpeed;
+        }
+
+        _curveAmount = Mathf.Clamp(_curveAmount, -_maxCurveAmount, _maxCurveAmount);
     }
 
-    private void ThrowBall(Vector2 mousePos)
+    private float minThrowSpeed = 5f;
+    private float maxThrowSpeed = 40f;
+    private float expectedMaxSwipeSpeed = 4000f;
+
+    private void ThrowBall(Vector2 swipeVelocity)
     {
+        Debug.Log(swipeVelocity.magnitude);
         _rigidbody.useGravity = true;
 
-        float differenceY = (mousePos.y - _lastMouseY) / Screen.height * 100;
-        _speed = _throwSpeed * differenceY;
+        // Calculate the normalized swipe speed as a value between 0 and 1.
+        float normalizedSwipeSpeed = Mathf.Clamp01(swipeVelocity.magnitude / Screen.dpi / expectedMaxSwipeSpeed);
 
-        float x = (mousePos.x - _lastMouseX) / Screen.width;
+        // Scale the speed between min and max throw speeds.
+        _speed = Mathf.Lerp(minThrowSpeed, maxThrowSpeed, normalizedSwipeSpeed);
 
-        Vector3 direction = Quaternion.AngleAxis(x * 180f, Vector3.up) * new Vector3(0f, 1f, 1f);
-        direction = Camera.main.transform.TransformDirection(direction);
+        // Calculate throw direction (45 degrees upward).
+        Vector3 throwDirection = (Camera.main.transform.forward + Vector3.up).normalized;
 
-        _rigidbody.AddForce(direction * _speed);
+        // Apply the force to the Pokeball.
+        _rigidbody.AddForce(throwDirection * _speed, ForceMode.Impulse);
 
         _holding = false;
         _thrown = true;
 
-        Invoke("Reset", 5.0f);
+        StartCoroutine(DelayedReset());
     }
+
+
 }
