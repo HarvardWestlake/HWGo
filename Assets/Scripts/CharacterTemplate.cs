@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEngine;
 
 // Define the enums that represent department and rarity
 public enum Department
@@ -33,12 +34,13 @@ public class Faculty
     public Texture2D Image { get; set; }
 
     // Constructor for the Faculty class
+    // Constructor for the Faculty class
     public Faculty(string id, string name, Department dept, Rarity rarity, double health, double damage, string attack, string imagePath)
     {
         Id = id;
         Name = name;
-        Dept = dept;
-        Rarity = rarity;
+        Dept = dept; // Use the parameter directly
+        Rarity = rarity; // Use the parameter directly
         Health = health;
         Damage = damage;
         SpecialAttack = attack;
@@ -47,10 +49,10 @@ public class Faculty
 
     public Faculty()
     {
-        Id = 0001;
+        Id = "0001";
         Name = "Mr Varney";
-        Dept = Math;
-        Rarity = Legendary;
+        Dept = Department.Math; // Specify the enum type
+        Rarity = Rarity.Legendary; // Specify the enum type
         Health = 150.0;
         Damage = 173;
         SpecialAttack = "The Varney Special";
@@ -75,6 +77,7 @@ public class CharacterTemplate
     public CharacterTemplate()
     {
         FacultyList = new ArrayList();
+        AddVarney();
     }
 
     // Method to add a Faculty object to the FacultyList
@@ -83,7 +86,7 @@ public class CharacterTemplate
         FacultyList.Add(faculty);
     }
 
-    public void AddVarney(Faculty faculty)
+    public void AddVarney()
     {
         Faculty varney = new Faculty();
         FacultyList.Add(varney);
