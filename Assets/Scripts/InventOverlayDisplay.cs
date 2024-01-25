@@ -46,5 +46,17 @@ public class InventOverlayDisplay : MonoBehaviour
     public void OnButtonClickWithId1()
     {
         OnButtonClick("0001"); // "0001" is the ID for a specific faculty
+        string facultyId = "0001";
+        foreach (Faculty faculty in FacultyList)
+        {
+            if (faculty.Id == facultyId)
+            {
+                // Access the faculty variables here
+                // For example, display their name or other properties
+                DisplayFacultyDetails(faculty);
+                break; // Stop the loop once we've found the right faculty
+            }
+        }
     }
+    
 }
