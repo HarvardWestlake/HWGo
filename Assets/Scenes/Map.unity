@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 675609286}
   - component: {fileID: 675609289}
   - component: {fileID: 675609288}
+  - component: {fileID: 675609290}
   m_Layer: 0
   m_Name: LocationManager
   m_TagString: Untagged
@@ -1063,6 +1064,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &675609290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675609285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0697409a811b41fbae8b57711e92c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonPrefabs: []
+  latitudeMin: 0
+  latitudeMax: 0
+  longitudeMin: 0
+  longitudeMax: 0
+  goMap: {fileID: 0}
 --- !u!1 &680024014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,8 +1721,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonPrefabs:
-  - {fileID: 191634, guid: 45ab07dc58f034ade95a5bfaa0fca008, type: 3}
-  - {fileID: 191634, guid: 45ab07dc58f034ade95a5bfaa0fca008, type: 3}
+  - {fileID: 544392202563503846, guid: 6f2fc96a1ad64440aacd3346c6d3d2e2, type: 3}
+  - {fileID: 544392202563503846, guid: d2ac0bf8d8b0b46e0a7f026e24a387f8, type: 3}
+  - {fileID: 544392202563503846, guid: 5c9098fdfbe4f4a878d449002ac30231, type: 3}
+  - {fileID: 544392202563503846, guid: a5c649a35acad46e09e16d293f94e2d1, type: 3}
+  - {fileID: 544392202563503846, guid: ee66fdeb29d82443cb89f2f2068fc9b7, type: 3}
+  - {fileID: 544392202563503846, guid: fee557b8bb7b248058a0f2021f3b0ec4, type: 3}
   latitudeMin: 34.142094
   latitudeMax: 34.139095
   longitudeMin: -118.41412
@@ -2266,4 +2289,3 @@ SceneRoots:
   - {fileID: 675609287}
   - {fileID: 1379913657}
   - {fileID: 557054844}
-  - {fileID: 725107668}
