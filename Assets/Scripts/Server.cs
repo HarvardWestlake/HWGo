@@ -1,19 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization;
+
 using UnityEngine.Networking;
 
-public class OnClick : MonoBehaviour
-{
-    public void LoadBack()
-    {
-        SceneManager.LoadScene("Map");
-        AudioListener.volume = 1;
+using System.Collections;
+
+using System.Runtime.Serialization;
+
+ 
+
+public class Server: MonoBehaviour {
+
+    // on click
+
+    void Start() {
+
+        Debug.Log("Program Starting");
+
+        CreateAccount("Jake", "JakesPassword");
+
     }
 
-     [Serializable]
+ 
+
+    [Serializable]
 
     public struct UserCredentials {
 
