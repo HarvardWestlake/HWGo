@@ -68,17 +68,27 @@ public class Faculty
 }
 
 // Define the CharacterTemplate class that contains an ArrayList of Faculty objects
-public class CharacterTemplate
+public class CharacterTemplate : MonoBehaviour
 {
-    // ArrayList to store Faculty objects
+    public static CharacterTemplate Instance { get; private set; }
+
     public ArrayList FacultyList { get; private set; }
 
-    // Constructor for the CharacterTemplate class
-    public CharacterTemplate()
+    void Awake()
     {
-        FacultyList = new ArrayList();
-        AddVarney();
+        if (Instance == null)
+        {
+            Instance = this;
+            FacultyList = new ArrayList();
+            AddVarney(); // This method initializes your FacultyList
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
 
     // Method to add a Faculty object to the FacultyList
     public void AddFaculty(Faculty faculty)
