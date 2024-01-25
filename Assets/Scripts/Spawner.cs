@@ -75,11 +75,18 @@ public class PokemonSpawner : MonoBehaviour
                 closestDistance = distance;
             }
         }
+        
+        if (closestPokemon != null)
+        {
+            Debug.Log("Closest Pokémon is " + closestPokemon.name + " at " + closestDistance + " distance");
 
-        Debug.Log("Closest Pokémon is " + closestPokemon.name + " at " + closestDistance + " distance");
-
-        // save name in player prefs
-        PlayerPrefs.SetString("pokemonName", closestPokemon.name);
+            // save name in player prefs
+            PlayerPrefs.SetString("pokemonName", closestPokemon.name);
+        }
+        else
+        {
+            Debug.Log("No Pokémon found");
+        }
 
         return closestPokemon;
     }

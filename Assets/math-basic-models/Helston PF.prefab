@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Helston PF
       objectReference: {fileID: 0}
+    - target: {fileID: 191634, guid: 7d901a73a3d224caaa8a7670ebfc47cc, type: 3}
+      propertyPath: m_TagString
+      value: Pokemon
+      objectReference: {fileID: 0}
     - target: {fileID: 465872, guid: 7d901a73a3d224caaa8a7670ebfc47cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 100
