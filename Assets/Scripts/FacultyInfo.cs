@@ -7,7 +7,6 @@ public class FacultyInfo
     private static Random random = new Random();
     List<Faculty> allFaculty = new List<Faculty>();
 
-
     // List of last names for generating unique IDs
     private static Dictionary<string, Department> lastNameDepartments = new Dictionary<string, Department>
     {
@@ -49,10 +48,10 @@ public class FacultyInfo
     private static Dictionary<string, bool> usedNames = new Dictionary<string, bool>();
 
     // Method to generate a unique ID using the first six letters of last names (or the entire last name if less than six letters) and 6 random numbers
-    static string GenerateUniqueId(String lastName)
+    static int GenerateUniqueId(String lastName)
     {
         int randomNumber = random.Next(1, 16); // Generate random number between 1 and 15
-        return $"{lastName}{randomNumber}";
+        return randomNumber;
 
 
     }
@@ -85,7 +84,7 @@ public class FacultyInfo
         for (int i = 0; i < numberOfFaculties; i++)
         {
             String lastName = GetRandomUnusedLastName();
-            string randomId = GenerateUniqueId(lastName);
+            int randomId = GenerateUniqueId(lastName);
             Department department = GenerateDepartmentForLastName(lastName);
             Rarity randomRarity = (Rarity)random.Next(Enum.GetValues(typeof(Rarity)).Length);
 
@@ -103,7 +102,7 @@ public class FacultyInfo
 
         return allFaculty;
     }
-    public Faculty GetFacultyById(string facultyId)
+    public Faculty GetFacultyById(int facultyId)
     {
         return allFaculty.FirstOrDefault(faculty => faculty.id == facultyId);
     }
