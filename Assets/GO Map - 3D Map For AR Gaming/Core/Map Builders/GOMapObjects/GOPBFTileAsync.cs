@@ -22,8 +22,10 @@ namespace GoMap
 
 		public VectorTile vt;
 
-		//THis method is called on a background thread
-		public abstract GOFeature EditFeatureData (GOFeature goFeature);
+        public Bounds Bounds { get; internal set; }
+
+        //THis method is called on a background thread
+        public abstract GOFeature EditFeatureData (GOFeature goFeature);
 		//THis method is called on a background thread
 		public abstract GOFeature EditLabelData (GOFeature goFeature);
 		//THis method is called on a background thread

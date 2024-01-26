@@ -61,6 +61,8 @@ namespace GoMap
         #region BUILDINGS
 
         private float mdc = 60; // Group buildings every 50meters
+        internal object bounds;
+
         public GOCenterContainer findNearestCenter(Vector3 center, GameObject parent)
         {
 
