@@ -81,17 +81,20 @@ public class InventOverlayDisplay : MonoBehaviour
     private void DisplayFacultyDetails(Faculty faculty)
     {
         // Update each UI element with the corresponding faculty property
-        name = "Name: " + faculty.Name;
+        name = faculty.Name;
         department = "Department: " + faculty.Dept.ToString();
         rarity = "Rarity: " + faculty.Rarity.ToString();
-        health = "Health: " + faculty.Health.ToString();
-        damage = "Damage: " + faculty.Damage.ToString();
+        health = faculty.Health.ToString();
+        damage = faculty.Damage.ToString();
         attack = "Special Attack: " + faculty.SpecialAttack;
 
         //nameText = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
-
-
         SetName(name);
+        SetDepartment(department);
+        SetRarity(department);
+        SetHealth(health);
+        SetDamage(damage);
+        SetAttack(attack);
 
         if (faculty.Image != null)
         {
@@ -120,6 +123,66 @@ public class InventOverlayDisplay : MonoBehaviour
         } 
         else {
             Debug.LogError("nameText is not set.");
+        }
+    }
+
+    private void SetDepartment(string departmentInput) {
+        if(departmentText == null) {
+            Debug.LogError("this is WRONG");
+        }
+        if (departmentText != null) {
+            departmentText.text = departmentInput; // Use the .text property to set the text
+        } 
+        else {
+            Debug.LogError("departmentText is not set.");
+        }
+    }
+
+    private void SetAttack(string attackInput) {
+        if(specialAttackText == null) {
+            Debug.LogError("this is WRONG");
+        }
+        if (specialAttackText != null) {
+            specialAttackText.text = attackInput; // Use the .text property to set the text
+        } 
+        else {
+            Debug.LogError("specialAttackText is not set.");
+        }
+    }
+
+    private void SetRarity(string rarityInput) {
+        if(rarityText == null) {
+            Debug.LogError("this is WRONG");
+        }
+        if (rarityText != null) {
+            rarityText.text = rarityInput; // Use the .text property to set the text
+        } 
+        else {
+            Debug.LogError("rarityText is not set.");
+        }
+    }
+
+    private void SetHealth(string healthInput) {
+        if(healthText == null) {
+            Debug.LogError("this is WRONG");
+        }
+        if (healthText != null) {
+            healthText.text = healthInput; // Use the .text property to set the text
+        } 
+        else {
+            Debug.LogError("healthText is not set.");
+        }
+    }
+
+    private void SetDamage(string damageInput) {
+        if(damageText == null) {
+            Debug.LogError("this is WRONG");
+        }
+        if (damageText != null) {
+            damageText.text = damageInput; // Use the .text property to set the text
+        } 
+        else {
+            Debug.LogError("damageText is not set.");
         }
     }
 
