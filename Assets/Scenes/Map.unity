@@ -920,6 +920,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].useColliders
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[0].startInactive
       value: 0
       objectReference: {fileID: 0}
@@ -972,6 +976,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: layers.Array.data[2].defaultRendering.material
+      value: 
+      objectReference: {fileID: 2100000, guid: a7819e279049f4896b70351a082d896a, type: 2}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[2].defaultRendering.lineWidth
       value: 0
       objectReference: {fileID: 0}
@@ -981,7 +989,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ccfb5ee011c8044db94f19ceb1ebe876, type: 2}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[2].defaultRendering.polygonHeight
-      value: 2
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].renderingOptions.Array.data[0].kind
