@@ -28,8 +28,9 @@ public class RegisterFunctionality : MonoBehaviour
         PlayerPrefs.SetString("user_name", username);
         Debug.Log("username: " + username);
 
-        passwordIF.text = password;
+        password = passwordIF.text;
         PlayerPrefs.SetString("pass_word", password);
+        Debug.Log("username: " + username);
 
         CreateAccount(username, password);
     }
