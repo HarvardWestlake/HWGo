@@ -14,6 +14,8 @@ using TMPro;
 public class LoginBehavior : MonoBehaviour
 {
 
+//USERNAME AND PASSWORD STRINGS ARENT ACC UPDATING CHANGE IT SO THAT THEY ACTUALLY CHANGE INTO THE REAL USERNAME AND PASSSWORD
+//WAIT IM TYRING SOMETHING
     public Button login;
 
     public Button register;
@@ -27,29 +29,32 @@ public class LoginBehavior : MonoBehaviour
 
     private void Start()
     {
-        username = "";
-        password = "";
 
+        isRegister = true;
+        username = register.onClick.AddListener(getUsernameInfoOnClick);
+        password = register.onClick.AddListener(getPasswordInfoOnClick);
+        username = login.onClick.AddListener(getUsernameInfoOnClick);
+        password = login.onClick.AddListener(getPasswordInfoOnClick);
 
-        isRegister = false;
-        register.onClick.AddListener(getUsernameInfoOnClick);
-        register.onClick.AddListener(getPasswordInfoOnClick);
-        login.onClick.AddListener(getUsernameInfoOnClick);
-        login.onClick.AddListener(getPasswordInfoOnClick);
+        Debug.Log(username);
+        Debug.Log(password);
 
         CreateAccount(username, password);
     }
 
-    public void getUsernameInfoOnClick()
+    public string getUsernameInfoOnClick()
     {
         username = usernameIF.text;
         Debug.Log(username);
+        return username;
     }
 
-    public void getPasswordInfoOnClick()
+    public string getPasswordInfoOnClick()
     {
         password = passwordIF.text;
         Debug.Log(password);
+
+        return password;
     }
 
          [Serializable]
