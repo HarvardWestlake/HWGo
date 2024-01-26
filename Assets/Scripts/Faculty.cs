@@ -6,6 +6,8 @@ public enum Department
     Math,
     Science,
     History,
+    English,
+    Theater
     // ... add other departments
 }
 

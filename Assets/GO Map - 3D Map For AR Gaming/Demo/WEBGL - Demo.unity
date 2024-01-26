@@ -784,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: mapbox_accessToken
-      value: 
+      value: pk.eyJ1IjoibWFya21hbjEyMDciLCJhIjoiY2xyNTc5cTJzMDIxOTJrbjM4d2V6MDkyMiJ9.mJGmKJgkxIxn2ooLbQtmpQ
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: tiles.Array.data[0]
@@ -832,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: addGoFeatureComponents
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: layers.Array.data[3].json
@@ -1368,7 +1368,8 @@ PrefabInstance:
       propertyPath: layers.Array.data[4].renderingOptions.Array.data[3].outlineMaterial
       value: 
       objectReference: {fileID: 2100000, guid: c007afb0a9b7444b0ab59c1dd90a664b, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11416698, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
