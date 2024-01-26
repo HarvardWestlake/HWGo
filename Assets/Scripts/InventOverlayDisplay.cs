@@ -91,7 +91,7 @@ public class InventOverlayDisplay : MonoBehaviour
         //nameText = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
         SetName(name);
         SetDepartment(department);
-        SetRarity(department);
+        SetRarity(rarity);
         SetHealth(health);
         SetDamage(damage);
         SetAttack(attack);
