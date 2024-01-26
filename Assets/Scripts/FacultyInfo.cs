@@ -65,7 +65,7 @@ public class FacultyInfo
         return shortenedLastName + randomNumbers;
     }
 
-    string GetRandomUnusedLastName()
+    static string GetRandomUnusedLastName()
     {
         List<string> unusedLastNames = lastNameDepartments.Keys.Where(name => !usedNames.ContainsKey(name) || !usedNames[name]).ToList();
         if (unusedLastNames.Count == 0)
@@ -84,7 +84,7 @@ public class FacultyInfo
         return lastNameDepartments.ContainsKey(lastName) ? lastNameDepartments[lastName] : Department.History; // Default department if not specified
     }
 
-    public static List<Faculty> GenerateAllFaculty()
+    List<Faculty> GenerateAllFaculty()
     {
         List<Faculty> allFaculties = new List<Faculty>();
 
