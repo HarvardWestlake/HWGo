@@ -5,6 +5,8 @@ using System.Linq;
 public class FacultyInfo
 {
     private static Random random = new Random();
+    List<Faculty> allFaculty = new List<Faculty>();
+
 
     // List of last names for generating unique IDs
     private static Dictionary<string, Department> lastNameDepartments = new Dictionary<string, Department>
@@ -17,7 +19,7 @@ public class FacultyInfo
         { "Lopez", Department.Math },
         { "Mori", Department.Math },
         { "Movsisian", Department.Math },
-        { "Stout", Department.Math },
+        { "AStout", Department.Math },
         { "Stout", Department.Math }, // Assuming both "Stout" entries should have Department.Math
         { "Nealis", Department.Math },
         { "O’Connor", Department.Math },
@@ -47,22 +49,12 @@ public class FacultyInfo
     private static Dictionary<string, bool> usedNames = new Dictionary<string, bool>();
 
     // Method to generate a unique ID using the first six letters of last names (or the entire last name if less than six letters) and 6 random numbers
-    static string GenerateUniqueId()
+    static string GenerateUniqueId(String lastName)
     {
-        string lastName = GetRandomUnusedLastName();
+        int randomNumber = random.Next(1, 16); // Generate random number between 1 and 15
+        return $"{lastName}{randomNumber}";
 
-        // Use the first six letters of the last name, or the entire last name if less than six letters
-        string shortenedLastName = lastName.Length >= 6 ? lastName.Substring(0, 6) : lastName;
 
-        // Generate random numbers to complete the 12-character ID
-        int randomNumbersLength = 12 - shortenedLastName.Length;
-        string randomNumbers = random.Next((int)Math.Pow(10, randomNumbersLength), (int)Math.Pow(10, randomNumbersLength + 1) - 1).ToString();
-
-        // Ensure the random numbers part is the correct length
-        randomNumbers = randomNumbers.PadLeft(randomNumbersLength, '0');
-
-        // Combine shortened last name and random numbers to form the ID
-        return shortenedLastName + randomNumbers;
     }
 
     static string GetRandomUnusedLastName()
@@ -85,16 +77,15 @@ public class FacultyInfo
     }
 
     List<Faculty> GenerateAllFaculty()
-    {
-        List<Faculty> allFaculties = new List<Faculty>();
+    { 
 
         // Specify the number of faculties you want to generate
-        int numberOfFaculties = 10;
+        int numberOfFaculties = 15;
 
         for (int i = 0; i < numberOfFaculties; i++)
         {
-            string randomId = GenerateUniqueId();
-            string lastName = randomId.Substring(0, randomId.Length - 6); // Extract last name from ID
+            String lastName = GetRandomUnusedLastName();
+            string randomId = GenerateUniqueId(lastName);
             Department department = GenerateDepartmentForLastName(lastName);
             Rarity randomRarity = (Rarity)random.Next(Enum.GetValues(typeof(Rarity)).Length);
 
@@ -107,9 +98,13 @@ public class FacultyInfo
             Faculty faculty = new Faculty(randomId, department, randomRarity, defaultHealth, defaultDamage, defaultCatchPrompt);
 
             // Add the faculty to the list
-            allFaculties.Add(faculty);
+            allFaculty.Add(faculty);
         }
 
-        return allFaculties;
+        return allFaculty;
+    }
+    public Faculty GetFacultyById(string facultyId)
+    {
+        return allFaculty.FirstOrDefault(faculty => faculty.id == facultyId);
     }
 }
