@@ -8,5 +8,6 @@ public class OnClick : MonoBehaviour
     public void LoadBack()
     {
         SceneManager.LoadScene("Map");
+        AudioListener.volume = 1;
     }
 }

@@ -46,9 +46,6 @@ public class FacultyInfo
 
     private static Dictionary<string, bool> usedNames = new Dictionary<string, bool>();
 
-    // Dictionary to keep track of the number of times each department is generated
-    private static Dictionary<Department, int> departmentCount = new Dictionary<Department, int>();
-
     // Method to generate a unique ID using the first six letters of last names (or the entire last name if less than six letters) and 6 random numbers
     static string GenerateUniqueId()
     {
@@ -68,7 +65,7 @@ public class FacultyInfo
         return shortenedLastName + randomNumbers;
     }
 
-    static string GetRandomUnusedLastName()
+    string GetRandomUnusedLastName()
     {
         List<string> unusedLastNames = lastNameDepartments.Keys.Where(name => !usedNames.ContainsKey(name) || !usedNames[name]).ToList();
         if (unusedLastNames.Count == 0)
