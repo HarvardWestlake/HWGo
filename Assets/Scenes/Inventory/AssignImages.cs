@@ -24,7 +24,7 @@ public class AssignImages : MonoBehaviour
             if (i < ownedFacultyList.Count)
             {
                 // If you have a faculty object at this index, assign its image to the button
-                buttonImages[i].sprite = ownedFacultyList[i].facultyImage;
+                //buttonImages[i].sprite = ownedFacultyList[i].facultyImage;
                 inventoryButtons[i].interactable = true; // Enable the button
             }
             else
