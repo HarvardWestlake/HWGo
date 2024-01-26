@@ -358,7 +358,6 @@ MonoBehaviour:
   damageText: {fileID: 1653791}
   specialAttackText: {fileID: 1080232635}
   facultyImage: {fileID: 2143155943}
-  attack: 
 --- !u!1 &476751838
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +506,6 @@ GameObject:
   - component: {fileID: 673356194}
   - component: {fileID: 673356193}
   - component: {fileID: 673356196}
-  - component: {fileID: 673356197}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -591,7 +589,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 673356197}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventOverlayDisplay, Assembly-CSharp
         m_MethodName: OnButtonClickWithId1
         m_Mode: 1
@@ -654,26 +652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 174733061}
---- !u!114 &673356197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673356191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf0d21d324f24a7ea304de6c0f26ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  departmentText: {fileID: 0}
-  rarityText: {fileID: 0}
-  healthText: {fileID: 0}
-  damageText: {fileID: 0}
-  specialAttackText: {fileID: 0}
-  facultyImage: {fileID: 0}
-  attack: 
 --- !u!1 &763293118
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +661,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763293119}
-  - component: {fileID: 763293120}
   m_Layer: 5
   m_Name: Name GameObject
   m_TagString: Untagged
@@ -717,26 +694,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &763293120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763293118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf0d21d324f24a7ea304de6c0f26ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 786139879}
-  departmentText: {fileID: 1255443010}
-  rarityText: {fileID: 476751840}
-  healthText: {fileID: 1411032318}
-  damageText: {fileID: 1653791}
-  specialAttackText: {fileID: 1080232635}
-  facultyImage: {fileID: 2143155943}
-  attack: 
 --- !u!1 &786139876
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +751,6 @@ MonoBehaviour:
   damageText: {fileID: 1653791}
   specialAttackText: {fileID: 1080232635}
   facultyImage: {fileID: 2143155943}
-  attack: 
 --- !u!114 &786139879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,6 +1772,7 @@ GameObject:
   - component: {fileID: 1550947593}
   - component: {fileID: 1550947592}
   - component: {fileID: 1550947596}
+  - component: {fileID: 1550947597}
   - component: {fileID: 1550947591}
   m_Layer: 5
   m_Name: Canvas
@@ -1922,6 +1879,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9a691b3e51949b0a7cea6be70c1153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1550947597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550947590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf0d21d324f24a7ea304de6c0f26ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 786139879}
+  departmentText: {fileID: 1255443010}
+  rarityText: {fileID: 476751840}
+  healthText: {fileID: 1411032318}
+  damageText: {fileID: 1653791}
+  specialAttackText: {fileID: 1080232635}
+  facultyImage: {fileID: 2143155943}
 --- !u!1 &1951975851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,7 +2134,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1974273064}
-  - component: {fileID: 1974273065}
   m_Layer: 5
   m_Name: TestingText
   m_TagString: Untagged
@@ -2186,26 +2161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1974273065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974273063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf0d21d324f24a7ea304de6c0f26ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 786139879}
-  departmentText: {fileID: 1255443010}
-  rarityText: {fileID: 476751840}
-  healthText: {fileID: 1411032318}
-  damageText: {fileID: 1653791}
-  specialAttackText: {fileID: 1080232635}
-  facultyImage: {fileID: 2143155943}
-  attack: 
 --- !u!1 &2002351292
 GameObject:
   m_ObjectHideFlags: 0

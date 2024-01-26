@@ -19,7 +19,7 @@ public class InventOverlayDisplay : MonoBehaviour
     private string rarity;
     private string health;
     private string damage;
-    public string attack;
+    private string attack;
 
 
     public ArrayList FacultyList;
@@ -44,6 +44,16 @@ public class InventOverlayDisplay : MonoBehaviour
         else
         {
             Debug.LogError("CharacterTemplate instance is null.");
+        }
+
+        if(gameObject.activeInHierarchy) {
+            Debug.Log("ACTIVE");
+        }
+        if (!gameObject.activeInHierarchy) {
+            Debug.LogError(gameObject.name + " is not active in the hierarchy.");
+        }
+        if (!nameText.gameObject.activeInHierarchy) {
+            Debug.LogError(nameText.gameObject.name + " is not active in the hierarchy.");
         }
     }
 
@@ -102,9 +112,13 @@ public class InventOverlayDisplay : MonoBehaviour
     }
 
     private void SetName(string nameInput) {
+        if(nameText == null) {
+            Debug.LogError("this is WRONG");
+        }
         if (nameText != null) {
             nameText.text = nameInput; // Use the .text property to set the text
-        } else {
+        } 
+        else {
             Debug.LogError("nameText is not set.");
         }
     }
