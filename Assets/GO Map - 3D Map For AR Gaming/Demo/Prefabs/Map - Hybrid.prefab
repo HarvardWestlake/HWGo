@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4753608472522646}
   - component: {fileID: 114547028180385974}
-  - component: {fileID: 114890746579191196}
+  - component: {fileID: 418246315972081404}
   m_Layer: 0
   m_Name: Map - Hybrid
   m_TagString: Untagged
@@ -67,28 +67,9 @@ MonoBehaviour:
     useRealHeight: 1
     forceMinHeight: 0
     slicedExtrusion: 1
-    defaultRendering:
-      kind: 0
-      material: {fileID: 2100000, guid: ccfd7b06458f747629f739b911c4c265, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 4
-      tag: 
+    defaultRendering: {fileID: 0}
     renderingOptions:
-    - kind: 24
-      material: {fileID: 2100000, guid: cf9e3aa75fd994b149a979ad112511bb, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 4
-      tag: 
+    - {fileID: 0}
     useOnly: 
     avoid: 
     useTunnels: 1
@@ -109,38 +90,10 @@ MonoBehaviour:
     useRealHeight: 0
     forceMinHeight: 0
     slicedExtrusion: 1
-    defaultRendering:
-      kind: 0
-      material: {fileID: 2100000, guid: d33210158788c45e4b94e063c17c6106, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 0
-      tag: 
+    defaultRendering: {fileID: 0}
     renderingOptions:
-    - kind: 175
-      material: {fileID: 2100000, guid: 89553bd2b39824311a09774848d16ebc, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 0
-      tag: 
-    - kind: 178
-      material: {fileID: 2100000, guid: 89553bd2b39824311a09774848d16ebc, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 0
-      tag: 
+    - {fileID: 0}
+    - {fileID: 0}
     useOnly: 
     avoid: 57000000
     useTunnels: 1
@@ -173,17 +126,7 @@ MonoBehaviour:
     useRealHeight: 0
     forceMinHeight: 0
     slicedExtrusion: 1
-    defaultRendering:
-      kind: 0
-      material: {fileID: 2100000, guid: f0289c0f09a984e76abf7d18b6943589, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 0
-      outlineWidth: 0
-      polygonHeight: 0
-      tag: 
+    defaultRendering: {fileID: 0}
     renderingOptions: []
     useOnly: 
     avoid: 
@@ -217,68 +160,13 @@ MonoBehaviour:
     useRealHeight: 0
     forceMinHeight: 0
     slicedExtrusion: 1
-    defaultRendering:
-      kind: 0
-      material: {fileID: 2100000, guid: a8ed71969d0144c58bb288d11bae8be9, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 2
-      outlineWidth: 1
-      polygonHeight: 0
-      tag: 
+    defaultRendering: {fileID: 0}
     renderingOptions:
-    - kind: 238
-      material: {fileID: 2100000, guid: a8ed71969d0144c58bb288d11bae8be9, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 3
-      outlineWidth: 1.5
-      polygonHeight: 0
-      tag: 
-    - kind: 239
-      material: {fileID: 2100000, guid: a8ed71969d0144c58bb288d11bae8be9, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 2
-      outlineWidth: 1.5
-      polygonHeight: 0
-      tag: 
-    - kind: 240
-      material: {fileID: 2100000, guid: a8ed71969d0144c58bb288d11bae8be9, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 2
-      outlineWidth: 1.5
-      polygonHeight: 0
-      tag: 
-    - kind: 241
-      material: {fileID: 2100000, guid: 56272f2d3fa7441979d5653e08eb4963, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 1
-      outlineWidth: 1
-      polygonHeight: 0
-      tag: 
-    - kind: 242
-      material: {fileID: 2100000, guid: e2c4b8fe46f58478a8f6cfed4036c724, type: 2}
-      outlineMaterial: {fileID: 0}
-      hasRoof: 0
-      roofMaterial: {fileID: 0}
-      materials: []
-      lineWidth: 1
-      outlineWidth: 0
-      polygonHeight: 0
-      tag: 
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     useOnly: 
     avoid: f3000000
     useTunnels: 0
@@ -349,7 +237,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
   tiles: []
---- !u!114 &114890746579191196
+--- !u!114 &418246315972081404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,11 +246,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132459269695466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62db0f303b541403292cf21c91b5bc42, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb011f3c69474d9aa9ea302899661bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location:
-    latitude: 0
-    longitude: 0
-    altitude: 0
-    timestampLastUpdate: 0
