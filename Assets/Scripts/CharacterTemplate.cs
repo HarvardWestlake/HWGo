@@ -64,6 +64,14 @@ public class Faculty
         // Resources.Load<Texture2D> assumes the path is relative to a Resources folder in your Assets directory.
         // The image must also be marked as readable in the import settings to be loaded at runtime.
         Image = Resources.Load<Texture2D>(imagePath);
+        if (Image == null)
+        {
+            Debug.LogError("Failed to load image at path: " + imagePath);
+        }
+        else
+        {
+            Debug.Log("Successfully loaded image: " + imagePath);
+        }
     }
 }
 
@@ -78,6 +86,7 @@ public class CharacterTemplate : MonoBehaviour
     {
         if (Instance == null)
         {
+            Debug.Log("CharacterTemplate awakened");
             Instance = this;
             FacultyList = new ArrayList();
             AddVarney(); // This method initializes your FacultyList
@@ -85,6 +94,7 @@ public class CharacterTemplate : MonoBehaviour
         }
         else
         {
+            Debug.LogError("game object destroyed.");
             Destroy(gameObject);
         }
     }
@@ -98,6 +108,7 @@ public class CharacterTemplate : MonoBehaviour
 
     public void AddVarney()
     {
+        Debug.Log("loaded varney");
         Faculty varney = new Faculty();
         FacultyList.Add(varney);
     }

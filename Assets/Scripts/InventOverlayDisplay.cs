@@ -21,19 +21,24 @@ public class InventOverlayDisplay : MonoBehaviour
     private string damage;
     public string attack;
 
+
     public ArrayList FacultyList;
 
-    private TextMeshProUGUI facultyName;
+    //private TextMeshProUGUI testText;
 
     private void Awake() {
-        Debug.Log("This is a debug message!");
+        Debug.Log("InventOverlayDisplay awakened");
 
         //facultyName = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
 
         //SetName("Mr Varney");
+        //testText = transform.Find("testest").GetComponent<TextMeshProUGUI>();
+
+        //testText.SetText("Mr Varney");
 
         if (CharacterTemplate.Instance != null)
         {
+            Debug.Log("CharacterTemplate instance works");
             FacultyList = CharacterTemplate.Instance.FacultyList;
         }
         else
@@ -73,7 +78,11 @@ public class InventOverlayDisplay : MonoBehaviour
         damage = "Damage: " + faculty.Damage.ToString();
         attack = "Special Attack: " + faculty.SpecialAttack;
 
-        // Assuming you are using Texture2D for faculty images
+        //nameText = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
+
+
+        SetName(name);
+
         if (faculty.Image != null)
         {
             facultyImage.texture = faculty.Image;
@@ -84,13 +93,20 @@ public class InventOverlayDisplay : MonoBehaviour
             facultyImage.enabled = false; // Hide the image if not available
         }
 
-        nameText = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
-
-        SetName(name);
+        //debugging
+        if (facultyImage == null)
+        {
+            Debug.LogError("facultyImage is not set. Please assign it in the Inspector.");
+            return;
+        }
     }
 
     private void SetName(string nameInput) {
-        nameText.SetText(nameInput);
+        if (nameText != null) {
+            nameText.text = nameInput; // Use the .text property to set the text
+        } else {
+            Debug.LogError("nameText is not set.");
+        }
     }
 
     public void OnButtonClickWithId1()
