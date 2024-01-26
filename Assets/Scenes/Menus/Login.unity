@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 894287750}
   - component: {fileID: 894287754}
   - component: {fileID: 894287755}
+  - component: {fileID: 894287756}
   m_Layer: 0
   m_Name: SignUpButton
   m_TagString: Untagged
@@ -1581,6 +1582,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 894287756}
+        m_TargetAssemblyTypeName: RegisterFunctionality, Assembly-CSharp
+        m_MethodName: saveUsernameAndPassword
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &894287752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,6 +1660,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e828d87379da4f73848757112bc84bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &894287756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894287748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc73f4ba2e80641ffae5b217edddf949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameIF: {fileID: 1741858198}
+  passwordIF: {fileID: 78760774}
 --- !u!1 &966025294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2044,6 @@ GameObject:
   - component: {fileID: 1020727785}
   - component: {fileID: 1020727784}
   - component: {fileID: 1020727783}
-  - component: {fileID: 1020727787}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2117,23 +2143,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1020727787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020727782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b811999e4334f989c25d00ebe2eb15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  login: {fileID: 1573250427}
-  register: {fileID: 894287751}
-  isRegister: 0
-  usernameIF: {fileID: 1741858198}
-  passwordIF: {fileID: 78760774}
 --- !u!1 &1025531052
 GameObject:
   m_ObjectHideFlags: 0
