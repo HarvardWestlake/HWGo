@@ -36,19 +36,32 @@ public class InventOverlayDisplay : MonoBehaviour
         {
             FacultyList = CharacterTemplate.Instance.FacultyList;
         }
+        else
+        {
+            Debug.LogError("CharacterTemplate instance is null.");
+        }
     }
 
     public void OnButtonClick(string facultyId)
     {
-        foreach (Faculty faculty in FacultyList)
+        // Check if FacultyList is not null and has elements
+        if (FacultyList != null && FacultyList.Count > 0)
         {
-            if (faculty.Id == facultyId)
+            foreach (Faculty faculty in FacultyList)
             {
-                DisplayFacultyDetails(faculty);
-                break;
+                if (faculty != null && faculty.Id == facultyId)
+                {
+                    DisplayFacultyDetails(faculty);
+                    break;
+                }
             }
         }
+        else
+        {
+            Debug.LogError("FacultyList is null or empty.");
+        }
     }
+
 
     private void DisplayFacultyDetails(Faculty faculty)
     {
