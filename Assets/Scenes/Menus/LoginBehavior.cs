@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 
-public class LoginBehavior : MonoBehaviour {
+public class LoginBehavior : MonoBehaviour
+{
 
     public Button login;
 
@@ -15,33 +17,31 @@ public class LoginBehavior : MonoBehaviour {
     string username;
     string password;
 
-    public InputField usernameIF;
-    public InputField passwordIF;
+    public TMP_InputField usernameIF;
+    public TMP_InputField passwordIF;
 
     private void Start()
     {
         username = "";
         password = "";
 
-        
-        isRegister = false;
-            register.onClick.AddListener(getUsernameInfoOnClick);
-            register.onClick.AddListener(getPasswordInfoOnClick);
-            login.onClick.AddListener(getUsernameInfoOnClick);
-            login.onClick.AddListener(getPasswordInfoOnClick);
 
-    
+        isRegister = false;
+        register.onClick.AddListener(getUsernameInfoOnClick);
+        register.onClick.AddListener(getPasswordInfoOnClick);
+        login.onClick.AddListener(getUsernameInfoOnClick);
+        login.onClick.AddListener(getPasswordInfoOnClick);
     }
 
-   public void getUsernameInfoOnClick()
-   {
-    username = usernameIF.text;
+    public void getUsernameInfoOnClick()
+    {
+        username = usernameIF.text;
         Debug.Log(username);
-   }
+    }
 
-   public void getPasswordInfoOnClick()
-   {
-    password = passwordIF.text;
+    public void getPasswordInfoOnClick()
+    {
+        password = passwordIF.text;
         Debug.Log(password);
-   }
+    }
 }
