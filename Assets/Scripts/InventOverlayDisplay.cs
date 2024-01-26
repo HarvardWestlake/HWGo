@@ -14,6 +14,13 @@ public class InventOverlayDisplay : MonoBehaviour
     public TextMeshProUGUI specialAttackText;
     public RawImage facultyImage; // For displaying the image
 
+    private string name;
+    private string department;
+    private string rarity;
+    private string health;
+    private string damage;
+    public string attack;
+
     public ArrayList FacultyList;
 
     private TextMeshProUGUI facultyName;
@@ -21,18 +28,14 @@ public class InventOverlayDisplay : MonoBehaviour
     private void Awake() {
         Debug.Log("This is a debug message!");
 
-        facultyName = transform.Find("testest").GetComponent<TextMeshProUGUI>();
+        //facultyName = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
 
-        SetName("Mr Varney");
+        //SetName("Mr Varney");
 
         if (CharacterTemplate.Instance != null)
         {
             FacultyList = CharacterTemplate.Instance.FacultyList;
         }
-    }
-
-    private void SetName(string inputText) {
-        facultyName.text = inputText; // Use '.text' instead of '.setText'
     }
 
     public void OnButtonClick(string facultyId)
@@ -50,12 +53,12 @@ public class InventOverlayDisplay : MonoBehaviour
     private void DisplayFacultyDetails(Faculty faculty)
     {
         // Update each UI element with the corresponding faculty property
-        nameText.text = "Name: " + faculty.Name;
-        departmentText.text = "Department: " + faculty.Dept.ToString();
-        rarityText.text = "Rarity: " + faculty.Rarity.ToString();
-        healthText.text = "Health: " + faculty.Health.ToString();
-        damageText.text = "Damage: " + faculty.Damage.ToString();
-        specialAttackText.text = "Special Attack: " + faculty.SpecialAttack;
+        name = "Name: " + faculty.Name;
+        department = "Department: " + faculty.Dept.ToString();
+        rarity = "Rarity: " + faculty.Rarity.ToString();
+        health = "Health: " + faculty.Health.ToString();
+        damage = "Damage: " + faculty.Damage.ToString();
+        attack = "Special Attack: " + faculty.SpecialAttack;
 
         // Assuming you are using Texture2D for faculty images
         if (faculty.Image != null)
@@ -67,10 +70,19 @@ public class InventOverlayDisplay : MonoBehaviour
         {
             facultyImage.enabled = false; // Hide the image if not available
         }
+
+        nameText = transform.Find("DisplayName").GetComponent<TextMeshProUGUI>();
+
+        SetName(name);
+    }
+
+    private void SetName(string nameInput) {
+        nameText.SetText(nameInput);
     }
 
     public void OnButtonClickWithId1()
     {
+        Debug.Log("click ID 1!");
         OnButtonClick("0001");
     }
 }
