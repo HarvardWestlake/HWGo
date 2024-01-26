@@ -47,10 +47,8 @@ namespace GoMap
 		[Regex (@"^(?!\s*$).+", "Please insert your MapBox Access Token")]public string mapbox_accessToken = "";
 		[Regex (@"^(?!\s*$).+", "Please insert your OSM API key")]public string osm_api_key = "";
 		[Regex (@"^(?!\s*$).+", "Please insert your Nextzen API key")] public string nextzen_api_key = "";
+		[Regex(@"^(?!\s*$).+", "Please insert your Protomaps API key")] public string protomaps_api_key = "";
 
-        [Regex(@"^(?!\s*$).+", "Please insert your Protomaps API key")] public string protomaps_api_key = "";
-
-		
 			
 		public Material tileBackground;
 		[HideInInspector] public GameObject tempTileBackgorund;
@@ -185,7 +183,6 @@ namespace GoMap
 		#region Location Manager Events
 		public event Action<Coordinates> OnLocationChangedEvent;
 		public event Action<Coordinates> OnOriginSetEvent;
-
 		public void OnLocationChanged (Coordinates currentLocation) {
 			if (OnLocationChangedEvent != null)
 			{
@@ -199,7 +196,6 @@ namespace GoMap
 		}
 
 		public void OnOriginSet (Coordinates currentLocation) {
-
 			if (OnOriginSetEvent != null)
 			{
 				OnOriginSetEvent.Invoke(currentLocation);
