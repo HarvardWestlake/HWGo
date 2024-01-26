@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425081417}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimpleCombatSystem, Assembly-CSharp
         m_MethodName: PlayerHeal
         m_Mode: 1
@@ -2790,7 +2790,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425081417}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimpleCombatSystem, Assembly-CSharp
         m_MethodName: PlayerHeal
         m_Mode: 1
@@ -2923,7 +2923,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425081417}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimpleCombatSystem, Assembly-CSharp
         m_MethodName: PlayerDamage
         m_Mode: 1
@@ -3129,8 +3129,8 @@ GameObject:
   - component: {fileID: 1425081415}
   - component: {fileID: 1425081414}
   - component: {fileID: 1425081413}
-  - component: {fileID: 1425081417}
   - component: {fileID: 1425081416}
+  - component: {fileID: 1425081417}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3237,14 +3237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62392b182af842f5b3b442a844766fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMultiplier: 7
-  healthBase: 20
-  playerHealthBar: {fileID: 146533176}
-  playerHealthText: {fileID: 534454996}
-  playerLevelText: {fileID: 1926732079}
-  enemyHealthBar: {fileID: 2085890238}
-  enemyHealthText: {fileID: 310023036}
-  enemyLevelText: {fileID: 661989029}
+  allPokemons: []
+  abilityButtons: []
+  pokemonNameText: {fileID: 0}
+  playerHealthBar: {fileID: 0}
+  enemyHealthBar: {fileID: 0}
 --- !u!1 &1510073934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,7 +3810,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425081417}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimpleCombatSystem, Assembly-CSharp
         m_MethodName: PlayerDamage
         m_Mode: 1
