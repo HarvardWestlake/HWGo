@@ -67,10 +67,9 @@ namespace GoShared {
 
 		}
 
-        
-        //CONVERSIONS
+		//CONVERSIONS
 
-        public void updateLocation (LocationInfo location){
+		public void updateLocation (LocationInfo location){
 
 			this.latitude = location.latitude;
 			this.longitude = location.longitude;

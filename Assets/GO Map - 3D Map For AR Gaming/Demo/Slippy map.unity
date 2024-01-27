@@ -926,7 +926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: mapbox_accessToken
-      value: pk.eyJ1IjoiYm9udW51MjAyIiwiYSI6ImNscjNzeW1oZTFnbm4yaXBlOTEyM2QwZXYifQ.ZPwP58WlfcWN0fqxHEQ0tA
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: tiles.Array.data[0]
