@@ -829,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: mapType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: zoomLevel
@@ -838,6 +838,10 @@ PrefabInstance:
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: tileBuffer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
+      propertyPath: osm_api_key
+      value: VZohYdbj6F2JoRPtzn9M
       objectReference: {fileID: 0}
     - target: {fileID: 11458246, guid: 2eb893fe48df34d2f8555a95c4675ac6, type: 3}
       propertyPath: satellite4X
@@ -1032,7 +1036,6 @@ GameObject:
   - component: {fileID: 675609286}
   - component: {fileID: 675609289}
   - component: {fileID: 675609288}
-  - component: {fileID: 675609290}
   m_Layer: 0
   m_Name: LocationManager
   m_TagString: Untagged
@@ -1151,24 +1154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &675609290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675609285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0697409a811b41fbae8b57711e92c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokemonPrefabs: []
-  latitudeMin: 0
-  latitudeMax: 0
-  longitudeMin: 0
-  longitudeMax: 0
-  goMap: {fileID: 0}
 --- !u!1 &680024014
 GameObject:
   m_ObjectHideFlags: 0
