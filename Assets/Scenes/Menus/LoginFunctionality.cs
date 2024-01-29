@@ -12,115 +12,108 @@ using TMPro;
 
 public class LoginFunctionality : MonoBehaviour
 {
-    string username;
-    string password;
 
-    public TMP_InputField usernameIF;
-    public TMP_InputField passwordIF;
-
-   void Start()
+    public void LoadBack()
     {
-
-    }
-    public void saveUsernameAndPassword()
-    {
-        username = usernameIF.text;
-        PlayerPrefs.SetString("user_name", username);
-        Debug.Log("login username: " + username);
-
-        password = passwordIF.text;
-        PlayerPrefs.SetString("pass_word", password);
-        Debug.Log("login password: " + password);
-
-        UserCredentials objUserData = new UserCredentials();
-
-        objUserData.username = username;
-
-        objUserData.password = password;
-
-        string jsonUserData = JsonUtility.ToJson(objUserData);
-
-
-
-        CreateAccountCallback(jsonUserData);
+        SceneManager.LoadScene("Map");
+        AudioListener.volume = 1;
     }
 
-    
+    public TMP_InputField username;
+    public TMP_InputField password;
 
-         [Serializable]
+    public void LoginButton()
+    {
+        Login(username.text, password.text);
+    }
 
-    public struct UserCredentials {
+    public void CreateAccountButton()
+    {
+        CreateAccount(username.text, password.text);
+    }
 
+    [Serializable]
+    public struct UserCredentials
+    {
         public string username;
-
         public string password;
-
     }
 
- 
-
-    void CreateAccount(string sUN, string sPW) {
-
+    public void CreateAccount(string sUN, string sPW)
+    {
         UserCredentials objUserData = new UserCredentials();
-
         objUserData.username = sUN;
-
         objUserData.password = sPW;
-
         string jsonUserData = JsonUtility.ToJson(objUserData);
-
         Debug.Log(jsonUserData);
-
         StartCoroutine(PostFileFromServer("createAccount", jsonUserData, CreateAccountCallback));
-
     }
-
- 
 
     // sData is user counting id
-
-    void CreateAccountCallback(string sData) {
-
-        if (null == sData) {
-
+    void CreateAccountCallback(string sData)
+    {
+        if (null == sData)
+        {
             Debug.Log("Server error.");
-
             return;
-
         }
-
-        Debug.Log("semiish at least worked: " + sData);
-        
-
+        else if (-1 == (int.Parse(sData)))
+        {
+            Debug.Log("Username taken");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("UserID", int.Parse(sData));
+            Debug.Log(sData);
+            LoadBack();
+        }
     }
 
- 
+    public void Login(string sUN, string sPW)
+    {
+        UserCredentials objUserData = new UserCredentials();
+        objUserData.username = sUN;
+        objUserData.password = sPW;
+        string jsonUserData = JsonUtility.ToJson(objUserData);
+        Debug.Log(jsonUserData);
+        StartCoroutine(PostFileFromServer("login", jsonUserData, LoginCallback));
+    }
 
-    IEnumerator PostFileFromServer(string sField, string jsonData, System.Action<string> doneCallback) {
-
-        WWWForm form = new WWWForm();
-
-        form.AddField(sField, jsonData);
-
-        string sURL = "https://hwgo.codehw.net/main.php";
-
-        using (UnityWebRequest webRequest = UnityWebRequest.Post(sURL, form)) {
-
-            yield return webRequest.SendWebRequest();
-
-            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError) {
-
-                Debug.LogError("Error: " + webRequest.error);
-
-                doneCallback?.Invoke(null);
-
-            }
-
-            else
-
-                doneCallback?.Invoke(webRequest.downloadHandler.text);
-
+    // sData is user counting id
+    void LoginCallback(string sData)
+    {
+        if (null == sData)
+        {
+            Debug.Log("Server error.");
+            return;
         }
+        else if (-1 == (int.Parse(sData)))
+        {
+            Debug.Log("Username or password incorrect");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("UserID", int.Parse(sData));
+            Debug.Log(sData);
+            LoadBack();
+        }
+    }
 
+    IEnumerator PostFileFromServer(string sField, string jsonData, System.Action<string> doneCallback)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField(sField, jsonData);
+        string sURL = "https://hwgo.codehw.net/main.php";
+        using (UnityWebRequest webRequest = UnityWebRequest.Post(sURL, form))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+                doneCallback?.Invoke(null);
+            }
+            else
+                doneCallback?.Invoke(webRequest.downloadHandler.text);
+        }
     }
 }
