@@ -129,8 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62db0f303b541403292cf21c91b5bc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location:
-    latitude: 0
-    longitude: 0
-    altitude: 0
-    timestampLastUpdate: 0
+  portionSize: 100

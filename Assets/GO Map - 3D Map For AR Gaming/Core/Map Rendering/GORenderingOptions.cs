@@ -5,8 +5,9 @@ using UnityEngine.Serialization;
 namespace GoMap {
 
 	[System.Serializable]
-	public class GORenderingOptions : MonoBehaviour
-    {
+	public class GORenderingOptions
+	{
+
 		public GOFeatureKind kind;
 		public Material material;
 		[ConditionalHide("parent/layerType", "Roads")] public Material outlineMaterial;
@@ -16,13 +17,13 @@ namespace GoMap {
 
 		public Material[] materials;
 
-		//		[ConditionalHide("parent/layerType", "Roads")]
+//		[ConditionalHide("parent/layerType", "Roads")]
 		public float lineWidth;
 		[ConditionalHide("parent/layerType", "Roads")] public float outlineWidth;
 		[ConditionalHide("parent/layerType", "Roads", true)] public float polygonHeight;
 
 		public string tag;
-	}
-
 
 	}
+
+}
