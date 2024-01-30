@@ -30,6 +30,8 @@ public class LoginFunctionality : MonoBehaviour
     public void CreateAccountButton()
     {
         CreateAccount(username.text, password.text);
+
+        LoadBack();
     }
 
     [Serializable]
@@ -75,7 +77,6 @@ public class LoginFunctionality : MonoBehaviour
         objUserData.username = sUN;
         objUserData.password = sPW;
         string jsonUserData = JsonUtility.ToJson(objUserData);
-        Debug.Log(jsonUserData);
         StartCoroutine(PostFileFromServer("login", jsonUserData, LoginCallback));
     }
 
