@@ -12,6 +12,9 @@ public class PokeballButton : MonoBehaviour, IPointerClickHandler
         // Prevent the click from being detected by other layers
         eventData.pointerPressRaycast = new RaycastResult();
         eventData.Use();
+
+        //resets volume button
+        AudioListener.volume = 1;
     }
 
     // Custom function to be called when the pokeball is clicked

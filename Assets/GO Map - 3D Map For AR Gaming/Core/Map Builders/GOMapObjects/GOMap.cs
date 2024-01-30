@@ -49,7 +49,6 @@ namespace GoMap
 		[Regex (@"^(?!\s*$).+", "Please insert your Nextzen API key")] public string nextzen_api_key = "";
 		[Regex(@"^(?!\s*$).+", "Please insert your Protomaps API key")] public string protomaps_api_key = "";
 
-		
 			
 		public Material tileBackground;
 		[HideInInspector] public GameObject tempTileBackgorund;
@@ -182,9 +181,13 @@ namespace GoMap
 
 
 		#region Location Manager Events
-
+		public event Action<Coordinates> OnLocationChangedEvent;
+		public event Action<Coordinates> OnOriginSetEvent;
 		public void OnLocationChanged (Coordinates currentLocation) {
-
+			if (OnLocationChangedEvent != null)
+			{
+				OnLocationChangedEvent.Invoke(currentLocation);
+			}
 			if (tileBackground != null /*&& Application.isMobilePlatform*/) {
 				DestroyTemporaryMapBackground ();
 			}
@@ -193,7 +196,10 @@ namespace GoMap
 		}
 
 		public void OnOriginSet (Coordinates currentLocation) {
-
+			if (OnOriginSetEvent != null)
+			{
+				OnOriginSetEvent.Invoke(currentLocation);
+			}
 			//if (locationManager.demoLocation == DemoLocation.SearchMode)
 			DestroyCurrentMap ();
 
