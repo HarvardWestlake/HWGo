@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1480,7 +1480,6 @@ GameObject:
   - component: {fileID: 894287751}
   - component: {fileID: 894287750}
   - component: {fileID: 894287754}
-  - component: {fileID: 894287755}
   m_Layer: 0
   m_Name: SignUpButton
   m_TagString: Untagged
@@ -1569,9 +1568,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 894287755}
-        m_TargetAssemblyTypeName: OnClick, Assembly-CSharp
-        m_MethodName: LoadBack
+      - m_Target: {fileID: 1573250432}
+        m_TargetAssemblyTypeName: LoginFunctionality, Assembly-CSharp
+        m_MethodName: CreateAccountButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1635,18 +1634,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &894287755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894287748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e828d87379da4f73848757112bc84bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &966025294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2004,6 @@ GameObject:
   - component: {fileID: 1020727785}
   - component: {fileID: 1020727784}
   - component: {fileID: 1020727783}
-  - component: {fileID: 1020727787}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2117,23 +2103,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1020727787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020727782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b811999e4334f989c25d00ebe2eb15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  login: {fileID: 1573250427}
-  register: {fileID: 894287751}
-  isRegister: 0
-  usernameIF: {fileID: 1741858198}
-  passwordIF: {fileID: 78760774}
 --- !u!1 &1025531052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,7 +2552,7 @@ GameObject:
   - component: {fileID: 1573250427}
   - component: {fileID: 1573250426}
   - component: {fileID: 1573250430}
-  - component: {fileID: 1573250431}
+  - component: {fileID: 1573250432}
   m_Layer: 0
   m_Name: LoginButton
   m_TagString: Untagged
@@ -2672,9 +2641,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1573250431}
-        m_TargetAssemblyTypeName: OnClick, Assembly-CSharp
-        m_MethodName: LoadBack
+      - m_Target: {fileID: 1573250432}
+        m_TargetAssemblyTypeName: LoginFunctionality, Assembly-CSharp
+        m_MethodName: LoginButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2738,7 +2707,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &1573250431
+--- !u!114 &1573250432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2747,9 +2716,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1573250424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e828d87379da4f73848757112bc84bf, type: 3}
+  m_Script: {fileID: 11500000, guid: a85fe0f52f07d46078c67b6c766f2bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  username: {fileID: 1741858198}
+  password: {fileID: 78760774}
 --- !u!1 &1594497954
 GameObject:
   m_ObjectHideFlags: 0
